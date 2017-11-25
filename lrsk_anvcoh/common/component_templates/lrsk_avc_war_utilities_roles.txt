@@ -405,7 +405,7 @@ utility_component_template = {
 }
 
 ################################################################################
-# BATTLE-BARGE
+# ARSENAL SHIP
 ################################################################################
 
 # Basic advantage over Battleships is more accuracy. Dreadnoughts will be able to bring their big guns to bare more reliably.

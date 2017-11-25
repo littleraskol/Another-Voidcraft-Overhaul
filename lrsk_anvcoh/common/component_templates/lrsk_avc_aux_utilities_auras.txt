@@ -10,6 +10,8 @@
 # TENDER
 ################################################################################
 
+# Tenders are repair and upkeep vessels.
+
 ##### Default #####
 
 # If nothing else, a tender makes some minimal improvements to all upkeep.
@@ -30,16 +32,14 @@ utility_component_template = {
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_aux_default
 			id = friendly_support_aura_aux
 			priority = 1
 		}
 
 		modifier = {
 			ship_auto_repair_add = 0.01
-			ship_shield_regen_add_perc = 0.025
-			ship_reparation_speed_mult = 0.05			
+			#ship_shield_regen_add_perc = 0.025
+			ship_reparation_speed_mult = 0.05
 			ship_upkeep_mult = -0.05
 			ship_emergency_ftl_mult = -0.05
 			ship_reparation_cost_mult = -0.05
@@ -82,15 +82,13 @@ utility_component_template = {
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_aux_repair
-			id = friendly_support_aura_aux
+			id = friendly_support_aura_aux_repair
 			priority = 10
 		}
 
 		modifier = {
 			ship_auto_repair_add = 0.03
-			ship_shield_regen_add_perc = 0.1
+			#ship_shield_regen_add_perc = 0.1
 			ship_reparation_speed_mult = 0.15
 			ship_upkeep_mult = -0.05
 			ship_emergency_ftl_mult = -0.05
@@ -134,15 +132,13 @@ utility_component_template = {
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_aux_supply
-			id = friendly_support_aura_aux
+			id = friendly_support_aura_aux_upkeep
 			priority = 10
 		}
 
 		modifier = {
 			ship_auto_repair_add = 0.01
-			ship_shield_regen_add_perc = 0.025
+			#ship_shield_regen_add_perc = 0.025
 			ship_reparation_speed_mult = 0.05
 			ship_upkeep_mult = -0.15
 			ship_emergency_ftl_mult = -0.15
@@ -170,35 +166,140 @@ utility_component_template = {
 
 # Specs tender for a balance between supply and repairs.
 
+#utility_component_template = {
+#	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_SERVICE"
+#	size = medium
+#	icon = "GFX_ship_part_aura_nanobot"
+#	icon_frame = 1
+#	power = -25
+#	cost = 100
+#
+#	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+#
+#	friendly_aura = {
+#		name = "lrsk_avc_aux_aura_aux_service"
+#		radius = @shipMediumAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#
+#
+#			id = friendly_support_aura_aux
+#			priority = 10
+#		}
+#
+#		modifier = {
+#			ship_auto_repair_add = 0.02
+#			#ship_shield_regen_add_perc = 0.075
+#			ship_reparation_speed_mult = 0.1
+#			ship_upkeep_mult = -0.1
+#			ship_emergency_ftl_mult = -0.1
+#			ship_reparation_cost_mult = -0.1
+#		}
+#
+#		graphics = {
+#			#area_effect = {
+#			#	entity = "circle_area_entity"
+#			#	dynamic_scale = yes
+#			#}
+#			#ship_effect = {
+#			#	entity = "ship_aura_positive_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 3
+#	}
+#}
+
+# LOGISTICS AURAS
+
+##### Default #####
+
+## If nothing else, a collier makes some minimal improvements to all upkeep.
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_DEFAULT"
+#	size = medium
+#	icon = "GFX_ship_part_empty_ftl_drive"
+#	icon_frame = 1
+#	power = 0
+#	cost = 0
+#
+#	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+#
+#	friendly_aura = {
+#		name = "lrsk_avc_aux_aura_log_default"
+#		radius = @shipXLargeAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#
+#
+#			id = friendly_support_aura_aux
+#			priority = 1
+#		}
+#
+#		modifier = {
+#			ship_auto_repair_add = 0.02
+#			#ship_shield_regen_add_perc = 0.075
+#			ship_reparation_speed_mult = 0.1
+#			ship_upkeep_mult = -0.1
+#			ship_emergency_ftl_mult = -0.1
+#			ship_reparation_cost_mult = -0.1
+#		}
+#
+#		graphics = {
+#			#area_effect = {
+#			#	entity = "circle_area_entity"
+#			#	dynamic_scale = yes
+#			#}
+#			#ship_effect = {
+#			#	entity = "ship_aura_positive_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 1
+#	}
+#}
+
+##### Service Suite #####
+
+# Specs tender for a balance between supply and repairs.
+
 utility_component_template = {
-	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_SERVICE"
+	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_SERVICE"
 	size = medium
 	icon = "GFX_ship_part_aura_nanobot"
 	icon_frame = 1
-	power = -25
-	cost = 100
+	power = -50
+	cost = 200
 
 	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+	prerequisites = {"tech_lrsk_avc_aux_logistics_ships"}
 
 	friendly_aura = {
-		name = "lrsk_avc_aux_aura_aux_service"
-		radius = @shipMediumAuraRange
+		name = "lrsk_avc_aux_aura_log_service"
+		radius = @shipXLargeAuraRange
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_aux_service
 			id = friendly_support_aura_aux
-			priority = 10
+			priority = 9
 		}
 
 		modifier = {
-			ship_auto_repair_add = 0.02
-			ship_shield_regen_add_perc = 0.075
-			ship_reparation_speed_mult = 0.1
-			ship_upkeep_mult = -0.1
-			ship_emergency_ftl_mult = -0.1
-			ship_reparation_cost_mult = -0.1
+			ship_auto_repair_add = 0.04
+			#ship_shield_regen_add_perc = 0.1
+			ship_reparation_speed_mult = 0.2
+			ship_upkeep_mult = -0.2
+			ship_emergency_ftl_mult = -0.2
+			ship_reparation_cost_mult = -0.2
 		}
 
 		graphics = {
@@ -218,65 +319,9 @@ utility_component_template = {
 	}
 }
 
-################################################################################
-# COLLIER
-################################################################################
-
-##### Default #####
-
-# If nothing else, a collier makes some minimal improvements to all upkeep.
-
-utility_component_template = {
-	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_DEFAULT"
-	size = medium
-	icon = "GFX_ship_part_empty_ftl_drive"
-	icon_frame = 1
-	power = 0
-	cost = 0
-
-	component_set = "lrsk_avc_aux_ship_collier_aura_components"
-
-	friendly_aura = {
-		name = "lrsk_avc_aux_aura_log_default"
-		radius = @shipXLargeAuraRange
-		apply_on = ships
-
-		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_log_default
-			id = friendly_support_aura_aux
-			priority = 1
-		}
-
-		modifier = {
-			ship_auto_repair_add = 0.02
-			ship_shield_regen_add_perc = 0.075
-			ship_reparation_speed_mult = 0.1
-			ship_upkeep_mult = -0.1
-			ship_emergency_ftl_mult = -0.1
-			ship_reparation_cost_mult = -0.1
-		}
-
-		graphics = {
-			#area_effect = {
-			#	entity = "circle_area_entity"
-			#	dynamic_scale = yes
-			#}
-			#ship_effect = {
-			#	entity = "ship_aura_positive_entity"
-			#	dynamic_scale = no
-			#}
-		}
-	}
-
-	ai_weight = {
-		weight = 1
-	}
-}
-
 ##### Repair Suite #####
 
-# Specs collier to focus on repairs, not supply.
+# Specs tender to focus on repairs, not supply.
 
 utility_component_template = {
 	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_REPAIR"
@@ -286,7 +331,8 @@ utility_component_template = {
 	power = -50
 	cost = 200
 
-	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+	prerequisites = {"tech_lrsk_avc_aux_logistics_ships"}
 
 	friendly_aura = {
 		name = "lrsk_avc_aux_aura_log_repair"
@@ -294,15 +340,13 @@ utility_component_template = {
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_log_repair
-			id = friendly_support_aura_aux
+			id = friendly_support_aura_aux_repair
 			priority = 9
 		}
 
 		modifier = {
 			ship_auto_repair_add = 0.06
-			ship_shield_regen_add_perc = 0.15
+			#ship_shield_regen_add_perc = 0.15
 			ship_reparation_speed_mult = 0.3
 			ship_upkeep_mult = -0.1
 			ship_emergency_ftl_mult = -0.1
@@ -328,7 +372,7 @@ utility_component_template = {
 
 ##### Supply Suite #####
 
-# Specs collier to focus on supply, not repairs.
+# Specs tender to focus on supply, not repairs.
 
 utility_component_template = {
 	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_SUPPLY"
@@ -338,7 +382,8 @@ utility_component_template = {
 	power = -50
 	cost = 200
 
-	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+	prerequisites = {"tech_lrsk_avc_aux_logistics_ships"}
 
 	friendly_aura = {
 		name = "lrsk_avc_aux_aura_log_supply"
@@ -346,15 +391,13 @@ utility_component_template = {
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_log_supply
-			id = friendly_support_aura_aux
+			id = friendly_support_aura_aux_upkeep
 			priority = 9
 		}
 
 		modifier = {
 			ship_auto_repair_add = 0.02
-			ship_shield_regen_add_perc = 0.05
+			#ship_shield_regen_add_perc = 0.05
 			ship_reparation_speed_mult = 0.1
 			ship_upkeep_mult = -0.3
 			ship_emergency_ftl_mult = -0.3
@@ -378,39 +421,319 @@ utility_component_template = {
 	}
 }
 
-##### Service Suite #####
+################################################################################
+# COLLIER
+################################################################################
 
-# Specs collier for a balance between supply and repairs.
+# Colliers are supply ships. Their "auras" are supposed to be different kinds of supplies in stock.
+# Ammo: +fire rate
+# Fuel: +sublight speed
+# Power: +shield regen
+# Patches: +armor
+
+# Mixed Supplies: Ammo/Fuel/Power/Patches
 
 utility_component_template = {
-	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_SERVICE"
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_MIXED"
 	size = medium
 	icon = "GFX_ship_part_aura_nanobot"
 	icon_frame = 1
-	power = -50
-	cost = 200
+	power = 0
+	cost = 0
 
 	component_set = "lrsk_avc_aux_ship_collier_aura_components"
 
 	friendly_aura = {
-		name = "lrsk_avc_aux_aura_log_service"
+		name = "lrsk_avc_aux_aura_stock_mixed"
 		radius = @shipXLargeAuraRange
 		apply_on = ships
 
 		stack_info = {
-			#id = friendly_support_aura_upkeep
-			#id = friendly_support_aura_log_service
-			id = friendly_support_aura_aux
-			priority = 9
+			id = friendly_support_aura_mixed_stocks
+			priority = 1
 		}
 
 		modifier = {
-			ship_auto_repair_add = 0.04
+			ship_fire_rate_mult = 0.025
+			ship_speed_mult = 0.05
+			ship_shield_regen_add_perc = 0.05
+			ship_armor_mult = 0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Attack Bundle: Ammo/Fuel
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_ATK"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_atk"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_attack_stocks
+			priority = 1
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.05
+			ship_speed_mult = 0.1
+			#ship_shield_regen_add_perc = 0.05
+			#ship_armor_mult = 0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Defense Bundle: Power/Patches
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_DEF"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_def"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_defense_stocks
+			priority = 1
+		}
+
+		modifier = {
+			#ship_fire_rate_mult = 0.025
+			#ship_speed_mult = 0.05
 			ship_shield_regen_add_perc = 0.1
-			ship_reparation_speed_mult = 0.2
-			ship_upkeep_mult = -0.2
-			ship_emergency_ftl_mult = -0.2
-			ship_reparation_cost_mult = -0.2
+			ship_armor_mult = 0.1
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Ammunition: Ammo
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_AMMO"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_ammo"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_ammo_stocks
+			priority = 1
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.1
+			#ship_speed_mult = 0.05
+			#ship_shield_regen_add_perc = 0.05
+			#ship_armor_mult = 0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Fuel Tanks: Fuel
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_FUEL"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_fuel"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_fuel_stocks
+			priority = 1
+		}
+
+		modifier = {
+			#ship_fire_rate_mult = 0.025
+			ship_speed_mult = 0.2
+			#ship_shield_regen_add_perc = 0.05
+			#ship_armor_mult = 0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Power Packs: Power
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_POWER"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_power"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_power_stocks
+			priority = 1
+		}
+
+		modifier = {
+			#ship_fire_rate_mult = 0.025
+			#ship_speed_mult = 0.05
+			ship_shield_regen_add_perc = 0.2
+			#ship_armor_mult = 0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Armor Patches: Patches
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AURA_STOCK_PATCHES"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_stock_patches"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_armor_stocks
+			priority = 1
+		}
+
+		modifier = {
+			#ship_fire_rate_mult = 0.025
+			#ship_speed_mult = 0.05
+			#ship_shield_regen_add_perc = 0.05
+			ship_armor_mult = 0.2
 		}
 
 		graphics = {

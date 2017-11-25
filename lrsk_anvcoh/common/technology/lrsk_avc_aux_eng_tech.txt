@@ -123,6 +123,11 @@ tech_lrsk_avc_aux_logistics_ships = {
 			title = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_TITLE"
 			desc = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_DESC"
 		}
+		#Note: Might need "custom = {" here.
+		component = {
+			title = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_AURA_TITLE"
+			desc = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_AURA_DESC"
+		}
 	}
 
 	weight_modifier = {

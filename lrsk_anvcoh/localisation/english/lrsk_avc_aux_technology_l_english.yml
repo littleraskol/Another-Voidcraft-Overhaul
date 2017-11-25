@@ -14,4 +14,7 @@ tech_lrsk_avc_aux_logistics_ships:0 "Logistics Ships"
 tech_lrsk_avc_aux_ships_desc:0 "Development of advanced logistics vessels will enable the sustained deployment of vast galactic armadas."
 
 LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_TITLE:0 "§HUnlocks Ship Type:§! Collier"
-LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_DESC:0 "§HCollier§!\nA support ship that can repair and/or supply whole navies."
+LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_DESC:0 "§HCollier§!\nA support ship that provides supply reserves for a fleet."
+
+LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_AURA_TITLE:0 "§HUnlocks Aura:§! Logistic Services"
+LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_AURA_DESC:0 "§HLogistic Services§!\nAdvanced service suites for Tenders."

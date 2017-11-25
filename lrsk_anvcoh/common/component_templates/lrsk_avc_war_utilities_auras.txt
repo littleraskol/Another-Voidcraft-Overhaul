@@ -632,7 +632,7 @@ utility_component_template = {
 #}
 
 ################################################################################
-# BATTLE-BARGE - Sensor Booster
+# ARSENAL SHIP - Sensor Booster
 ################################################################################
 #
 #utility_component_template = {
@@ -679,7 +679,7 @@ utility_component_template = {
 #}
 
 ################################################################################
-# BATTLE-BARGE - Hull Integrity Matrix
+# ARSENAL SHIP - Hull Integrity Matrix
 ################################################################################
 
 utility_component_template = {
@@ -726,7 +726,7 @@ utility_component_template = {
 
 
 ################################################################################
-# BATTLE-BARGE - Weapon Boost
+# ARSENAL SHIP - Weapon Boost
 ################################################################################
 
 utility_component_template = {
@@ -772,7 +772,7 @@ utility_component_template = {
 }
 
 ################################################################################
-# BATTLE-BARGE - Stasis Field
+# ARSENAL SHIP - Stasis Field
 ################################################################################
 
 utility_component_template = {

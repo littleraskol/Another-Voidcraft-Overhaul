@@ -1,40 +1,42 @@
 ﻿l_english:
 
+################################################################################
+# TENDER
+################################################################################
+
+# Tender
+LRSK_AVC_AUX_TENDER:0 "Tender"
+
 lrsk_avc_aux_tender:0 "Tender"
 lrsk_avc_aux_tender_plural:0 "Tenders"
-
-lrsk_avc_aux_collier:0 "Collier"
-lrsk_avc_aux_collier_plural:0 "Colliers"
 
 lrsk_avc_aux_aura_category_offensive:0 "Offensive Aura"
 lrsk_avc_aux_aura_category_defensive:0 "Defensive Aura"
 
-lrsk_avc_aux_ship_tender_aura_components:0 "Tender Field Emitter"
-lrsk_avc_aux_ship_tender_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
-lrsk_avc_aux_ship_collier_aura_components:0 "Collier Field Emitter"
-lrsk_avc_aux_ship_collier_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+lrsk_avc_aux_ship_tender_aura_components:0 "Tender Services"
+lrsk_avc_aux_ship_tender_aura_components_desc:0 "Tenders passively provide support for the fleet depending on the module selected."
 
 lrsk_avc_aux_aura_aux_default:0 "$lrsk_avc_aux_aura_category_defensive$ - Fleet Upkeep"
 lrsk_avc_aux_aura_aux_repair:0 "$lrsk_avc_aux_aura_category_defensive$ - Fleet Repairs"
 lrsk_avc_aux_aura_aux_supply:0 "$lrsk_avc_aux_aura_category_defensive$ - Fleet Supply"
-lrsk_avc_aux_aura_aux_service:0 "$lrsk_avc_aux_aura_category_defensive$ - Fleet Service"
+#lrsk_avc_aux_aura_aux_service:0 "$lrsk_avc_aux_aura_category_defensive$ - Fleet Service"
 
-lrsk_avc_aux_aura_log_default:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Upkeep"
+#lrsk_avc_aux_aura_log_default:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Upkeep"
 lrsk_avc_aux_aura_log_repair:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Repairs"
 lrsk_avc_aux_aura_log_supply:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Supply"
-lrsk_avc_aux_aura_log_service:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Service"
+lrsk_avc_aux_aura_log_service:0 "$lrsk_avc_aux_aura_category_defensive$ - Navy Upkeep"
 
 LRSK_AVC_AUX_AURA_EMPTY:0 "Empty Slot"
 
 LRSK_AVC_AUX_AURA_AUX_DEFAULT:0 "Upkeep Module"
 LRSK_AVC_AUX_AURA_AUX_REPAIR:0 "Repair Module"
 LRSK_AVC_AUX_AURA_AUX_SUPPLY:0 "Supply Module"
-LRSK_AVC_AUX_AURA_AUX_SERVICE:0 "Service Module"
+#LRSK_AVC_AUX_AURA_AUX_SERVICE:0 "Service Module"
 
-LRSK_AVC_AUX_AURA_LOG_DEFAULT:0 "Upkeep Suite"
+#LRSK_AVC_AUX_AURA_LOG_DEFAULT:0 "Upkeep Suite"
 LRSK_AVC_AUX_AURA_LOG_REPAIR:0 "Repair Suite"
 LRSK_AVC_AUX_AURA_LOG_SUPPLY:0 "Supply Suite"
-LRSK_AVC_AUX_AURA_LOG_SERVICE:0 "Service Suite"
+LRSK_AVC_AUX_AURA_LOG_SERVICE:0 "Upkeep Suite"
 
 LRSK_AVC_AUX_AURA_AUX:0 "Auxiliary"
 LRSK_AVC_AUX_AURA_LOG:0 "Logistic"
@@ -42,9 +44,46 @@ LRSK_AVC_AUX_AURA_LOG:0 "Logistic"
 LRSK_AVC_AUX_SHIP_AUX_AURA_DEFAULT:0 "LRSK_AVC_AUX_AURA_AUX$ $LRSK_AVC_AUX_AURA_AUX_DEFAULT$"
 LRSK_AVC_AUX_SHIP_AUX_AURA_REPAIR:0 "$LRSK_AVC_AUX_AURA_AUX$ $LRSK_AVC_AUX_AURA_AUX_REPAIR$"
 LRSK_AVC_AUX_SHIP_AUX_AURA_SUPPLY:0 "$LRSK_AVC_AUX_AURA_AUX$ $LRSK_AVC_AUX_AURA_AUX_SUPPLY$"
-LRSK_AVC_AUX_SHIP_AUX_AURA_SERVICE:0 "$LRSK_AVC_AUX_AURA_AUX$ $LRSK_AVC_AUX_AURA_AUX_SERVICE$"
+#LRSK_AVC_AUX_SHIP_AUX_AURA_SERVICE:0 "$LRSK_AVC_AUX_AURA_AUX$ $LRSK_AVC_AUX_AURA_AUX_SERVICE$"
 
-LRSK_AVC_AUX_SHIP_LOG_AURA_DEFAULT:0 "$LRSK_AVC_AUX_AURA_LOG$ $LRSK_AVC_AUX_AURA_LOG_DEFAULT$"
+#LRSK_AVC_AUX_SHIP_LOG_AURA_DEFAULT:0 "$LRSK_AVC_AUX_AURA_LOG$ $LRSK_AVC_AUX_AURA_LOG_DEFAULT$"
 LRSK_AVC_AUX_SHIP_LOG_AURA_REPAIR:0 "$LRSK_AVC_AUX_AURA_LOG$ $LRSK_AVC_AUX_AURA_LOG_REPAIR$"
 LRSK_AVC_AUX_SHIP_LOG_AURA_SUPPLY:0 "$LRSK_AVC_AUX_AURA_LOG$ $LRSK_AVC_AUX_AURA_LOG_SUPPLY$"
 LRSK_AVC_AUX_SHIP_LOG_AURA_SERVICE:0 "$LRSK_AVC_AUX_AURA_LOG$ $LRSK_AVC_AUX_AURA_LOG_SERVICE$"
+
+################################################################################
+# COLLIER
+################################################################################
+
+# Collier
+LRSK_AVC_AUX_COLLIER:0 "Collier"
+
+lrsk_avc_aux_collier:0 "Collier"
+lrsk_avc_aux_collier_plural:0 "Colliers"
+
+lrsk_avc_aux_ship_collier_aura_components:0 "Collier Stockpile"
+lrsk_avc_aux_ship_collier_aura_components_desc:0 "Colliers carry reserve supply stocks to improve fleet performance."
+
+LRSK_AVC_AUX_AURA_MIXED:0 "Mixed Supplies"
+LRSK_AVC_AUX_AURA_ATTACK:0 "Attack Bundle"
+LRSK_AVC_AUX_AURA_DEFENSE:0 "Defense Bundle"
+LRSK_AVC_AUX_AURA_AMMO:0 "Ammunition"
+LRSK_AVC_AUX_AURA_FUEL:0 "Fuel Tanks"
+LRSK_AVC_AUX_AURA_POWER:0 "Power Packs"
+LRSK_AVC_AUX_AURA_ARMOR:0 "Armor Patches"
+
+lrsk_avc_aux_aura_stock_mixed:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_MIXED$"
+lrsk_avc_aux_aura_stock_def:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_ATTACK$"
+lrsk_avc_aux_aura_stock_atk:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_DEFENSE$"
+lrsk_avc_aux_aura_stock_ammo:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_AMMO$"
+lrsk_avc_aux_aura_stock_fuel:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_FUEL$"
+lrsk_avc_aux_aura_stock_power:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_POWER$"
+lrsk_avc_aux_aura_stock_patches:0 "$lrsk_avc_aux_aura_category_defensive$ - $LRSK_AVC_AUX_AURA_ARMOR$"
+
+LRSK_AVC_AUX_SHIP_AURA_STOCK_MIXED:0 "Stockpile: $LRSK_AVC_AUX_AURA_MIXED$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_DEF:0 "Stockpile: $LRSK_AVC_AUX_AURA_ATTACK$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_ATK:0 "Stockpile: $LRSK_AVC_AUX_AURA_DEFENSE$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_AMMO:0 "Stockpile: $LRSK_AVC_AUX_AURA_AMMO$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_FUEL:0 "Stockpile: $LRSK_AVC_AUX_AURA_FUEL$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_POWER:0 "Stockpile: $LRSK_AVC_AUX_AURA_POWER$"
+LRSK_AVC_AUX_SHIP_AURA_STOCK_PATCHES:0 "Stockpile: $LRSK_AVC_AUX_AURA_ARMOR$"
