@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_counter_lrsk_avc_aux_tender"
+		textureFile = "gfx/interface/system/icon_lrsk_avc_aux_tender.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_counter_lrsk_avc_aux_collier"
+		textureFile = "gfx/interface/system/icon_lrsk_avc_aux_collier.dds"
+	}	
+}

@@ -1,0 +1,87 @@
+# Advanced Voidcraft Classes: Scouts
+# Section Templates - Scouts
+# Author: littleraskol (based on work by King Lemming)
+
+############ Scout ############
+
+# Intended for early-game exploration. Light and cheap, little room for defense.
+
+ship_section_template = {
+	key = "LRSK_AVC_SCOUT_PATHFIND"
+	ship_size = lrsk_avc_scout
+	fits_on_slot = mid
+	entity = "science_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	small_utility_slots = 4
+	medium_utility_slots = 1
+	aux_utility_slots = 1
+
+	cost = 15
+}
+
+# Intended for military scouting. More expensive, but more room for defensive features.
+# Tech prereq to prevent it from being default.
+
+ship_section_template = {
+	key = "LRSK_AVC_SCOUT_RECON"
+	ship_size = lrsk_avc_scout
+	fits_on_slot = mid
+	entity = "corvette_S1_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_spaceport_2 }
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	small_utility_slots = 3
+	medium_utility_slots = 2
+	aux_utility_slots = 1
+
+	cost = 25
+}
+
+# Intended for interdiction while serving as a military spotter.
+
+ship_section_template = {
+	key = "LRSK_AVC_SCOUT_INTERD"
+	ship_size = lrsk_avc_scout
+	fits_on_slot = mid
+	entity = "corvette_S1_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	small_utility_slots = 2
+	medium_utility_slots = 3
+	aux_utility_slots = 1
+
+	cost = 35
+}
+
+#ship_section_template = {
+#	key = "LRSK_AVC_SCOUT_RECON"
+#	ship_size = lrsk_avc_scout
+#	fits_on_slot = mid
+#	entity = "science_ship_entity"
+#	icon = "GFX_ship_part_core_mid"
+#
+#	prerequisites = { tech_spaceport_2 }
+#
+#	medium_utility_slots = 4
+#	aux_utility_slots = 1
+#
+#	cost = 25
+#}

@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ship_counter_lrsk_avc_scout"
+		textureFile = "gfx/interface/system/icon_lrsk_avc_scout.dds"
+	}	
+
+}

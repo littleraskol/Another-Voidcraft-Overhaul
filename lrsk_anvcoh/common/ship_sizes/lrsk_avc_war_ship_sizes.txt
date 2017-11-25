@@ -1,0 +1,197 @@
+# Advanced Voidcraft Classes
+# Military Ship Sizes
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Ship Variables
+################################################################################
+
+@monitor_combat_speed = 1.75
+@monitor_combat_rotation = 0.08
+@monitor_collision_radius = 2.2
+@monitor_formation_priority = 2
+
+@frigate_combat_speed = 1.25
+@frigate_combat_rotation = 0.05
+@frigate_collision_radius = 2.9
+@frigate_formation_priority = 1
+
+@battlecruiser_combat_speed = 1.25
+@battlecruiser_combat_rotation = 0.035
+@battlecruiser_collision_radius = 3.55
+@battlecruiser_formation_priority = 3
+
+@battlebarge_combat_speed = 0.75
+@battlebarge_combat_rotation = 0.025
+@battlebarge_collision_radius = 4.5
+@battlebarge_formation_priority = 5
+
+################################################################################
+# MONITOR
+################################################################################
+
+# A heavy, versatile corvette-sized class
+
+lrsk_avc_war_monitor = {
+	formation_priority = @monitor_formation_priority
+	max_speed = 5.25
+	acceleration = 0.35
+	rotation_speed = 0.1
+	combat_max_speed = @monitor_combat_speed
+	combat_rotation_speed = @monitor_combat_rotation
+	collision_radius = @monitor_collision_radius
+	modifier = {
+		ship_armor_add = 6
+		ship_evasion_add = 55
+	}
+	max_hitpoints = 375
+	size_multiplier = 2
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 2
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 75
+	required_spaceport_level = 2
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_monitor" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_small_aura_components"
+}
+
+################################################################################
+# FRIGATE
+################################################################################
+
+# A heavy, versatile destroyer-sized class
+
+lrsk_avc_war_frigate = {
+	formation_priority = @frigate_formation_priority
+	max_speed = 4.5
+	acceleration = 0.3
+	rotation_speed = 0.2
+	combat_max_speed = @frigate_combat_speed
+	combat_rotation_speed = @frigate_combat_rotation
+	collision_radius = @frigate_collision_radius
+	modifier = {
+		ship_armor_add = 20
+		ship_evasion_add = 25
+	}
+	max_hitpoints = 750
+	size_multiplier = 4
+	fleet_slot_size = 2
+	section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 150
+	required_spaceport_level = 4
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_frigate" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_medium_aura_components"
+}
+
+
+################################################################################
+# BATTLECRUISER
+################################################################################
+
+# A heavy, versatile cruiser-sized class
+
+lrsk_avc_war_battlecruiser = {
+	formation_priority = @battlecruiser_formation_priority
+	max_speed = 3.75
+	acceleration = 0.25
+	rotation_speed = 0.175
+	combat_max_speed = @battlecruiser_combat_speed
+	combat_rotation_speed = @battlecruiser_combat_rotation
+	collision_radius = @battlecruiser_collision_radius
+	modifier = {
+		ship_armor_add = 45
+		ship_evasion_add = 10
+	}
+	max_hitpoints = 2000
+	size_multiplier = 6
+	fleet_slot_size = 3
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 4
+	base_buildtime = 300
+	required_spaceport_level = 5
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_battlecruiser" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_large_aura_components"
+}
+
+
+################################################################################
+# BATTLE-BARGE
+################################################################################
+
+# A heavy, versatile battleship-sized class
+
+lrsk_avc_war_battlebarge = {
+	formation_priority = @battlebarge_formation_priority
+	max_speed = 3
+	acceleration = 0.2
+	rotation_speed = 0.15
+	combat_max_speed = @battlebarge_combat_speed
+	combat_rotation_speed = @battlebarge_combat_rotation
+	collision_radius = @battlebarge_collision_radius
+	modifier = {
+		ship_armor_add = 100
+		#ship_evasion_add = 0
+	}
+	max_hitpoints = 3000
+	size_multiplier = 10
+	fleet_slot_size = 4
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 5
+	base_buildtime = 600
+	required_spaceport_level = 6
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_battlebarge" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+}

@@ -1,0 +1,94 @@
+# Advanced Voidcraft Classes: Auxiliaries
+# Auxiliary Ship Sizes
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Ship Variables
+################################################################################
+
+@tender_combat_speed = 1
+@tender_collision_radius = 3
+
+@collier_combat_speed = 0.66
+@collier_collision_radius = 4.5
+
+@aux_formation_priority = 6
+
+################################################################################
+# TENDER
+################################################################################
+
+# A basic fleet support craft.
+
+lrsk_avc_aux_tender = {
+	formation_priority = @aux_formation_priority
+	max_speed = 3.75
+	acceleration = 0.3
+	rotation_speed = 0.2
+	combat_max_speed = @tender_combat_speed
+	combat_rotation_speed = 0.05
+	collision_radius = @tender_collision_radius
+	modifier = {
+		ship_armor_add = 15
+		ship_evasion_add = 40
+	}
+	max_hitpoints = 600
+	size_multiplier = 2
+	fleet_slot_size = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 150
+	required_spaceport_level = 3
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_aux_ships" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "lrsk_avc_aux_ship_tender_aura_components"
+}
+
+################################################################################
+# COLLIER
+################################################################################
+
+# An advanced navy support craft.
+
+lrsk_avc_aux_collier = {
+	formation_priority = @aux_formation_priority
+	max_speed = 2.75
+	acceleration = 0.2
+	rotation_speed = 0.2
+	combat_max_speed = @collier_combat_speed
+	combat_rotation_speed = 0.05
+	collision_radius = @collier_collision_radius
+	modifier = {
+		ship_armor_add = 40
+		ship_evasion_add = 25
+	}
+	max_hitpoints = 1800
+	size_multiplier = 4
+	fleet_slot_size = 3
+	#section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 300
+	required_spaceport_level = 5
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_aux_logistics_ships" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "lrsk_avc_aux_ship_collier_aura_components"
+}

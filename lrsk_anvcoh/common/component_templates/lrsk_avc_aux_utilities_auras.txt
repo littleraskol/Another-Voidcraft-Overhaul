@@ -1,0 +1,431 @@
+# Advanced Voidcraft Classes: Auxiliaries
+# Ship Components - Roles
+# Author: littleraskol (based on work by King Lemming)
+
+#lazy change of radius
+@shipMediumAuraRange = 80
+@shipXLargeAuraRange = 80
+
+################################################################################
+# TENDER
+################################################################################
+
+##### Default #####
+
+# If nothing else, a tender makes some minimal improvements to all upkeep.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_DEFAULT"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_aux_default"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_aux_default
+			id = friendly_support_aura_aux
+			priority = 1
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.01
+			ship_shield_regen_add_perc = 0.025
+			ship_reparation_speed_mult = 0.05			
+			ship_upkeep_mult = -0.05
+			ship_emergency_ftl_mult = -0.05
+			ship_reparation_cost_mult = -0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##### Repair Module #####
+
+# Specs tender to focus on repairs, not supply.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_REPAIR"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_aux_repair"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_aux_repair
+			id = friendly_support_aura_aux
+			priority = 10
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.03
+			ship_shield_regen_add_perc = 0.1
+			ship_reparation_speed_mult = 0.15
+			ship_upkeep_mult = -0.05
+			ship_emergency_ftl_mult = -0.05
+			ship_reparation_cost_mult = -0.05
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+##### Supply Module #####
+
+# Specs tender to focus on supply, not repairs.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_SUPPLY"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_aux_supply"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_aux_supply
+			id = friendly_support_aura_aux
+			priority = 10
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.01
+			ship_shield_regen_add_perc = 0.025
+			ship_reparation_speed_mult = 0.05
+			ship_upkeep_mult = -0.15
+			ship_emergency_ftl_mult = -0.15
+			ship_reparation_cost_mult = -0.15
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+##### Service Module #####
+
+# Specs tender for a balance between supply and repairs.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_AUX_AURA_SERVICE"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_aux_ship_tender_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_aux_service"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_aux_service
+			id = friendly_support_aura_aux
+			priority = 10
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.02
+			ship_shield_regen_add_perc = 0.075
+			ship_reparation_speed_mult = 0.1
+			ship_upkeep_mult = -0.1
+			ship_emergency_ftl_mult = -0.1
+			ship_reparation_cost_mult = -0.1
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+################################################################################
+# COLLIER
+################################################################################
+
+##### Default #####
+
+# If nothing else, a collier makes some minimal improvements to all upkeep.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_DEFAULT"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_log_default"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_log_default
+			id = friendly_support_aura_aux
+			priority = 1
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.02
+			ship_shield_regen_add_perc = 0.075
+			ship_reparation_speed_mult = 0.1
+			ship_upkeep_mult = -0.1
+			ship_emergency_ftl_mult = -0.1
+			ship_reparation_cost_mult = -0.1
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##### Repair Suite #####
+
+# Specs collier to focus on repairs, not supply.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_REPAIR"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -50
+	cost = 200
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_log_repair"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_log_repair
+			id = friendly_support_aura_aux
+			priority = 9
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.06
+			ship_shield_regen_add_perc = 0.15
+			ship_reparation_speed_mult = 0.3
+			ship_upkeep_mult = -0.1
+			ship_emergency_ftl_mult = -0.1
+			ship_reparation_cost_mult = -0.1
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+##### Supply Suite #####
+
+# Specs collier to focus on supply, not repairs.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_SUPPLY"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -50
+	cost = 200
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_log_supply"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_log_supply
+			id = friendly_support_aura_aux
+			priority = 9
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.02
+			ship_shield_regen_add_perc = 0.05
+			ship_reparation_speed_mult = 0.1
+			ship_upkeep_mult = -0.3
+			ship_emergency_ftl_mult = -0.3
+			ship_reparation_cost_mult = -0.3
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+##### Service Suite #####
+
+# Specs collier for a balance between supply and repairs.
+
+utility_component_template = {
+	key = "LRSK_AVC_AUX_SHIP_LOG_AURA_SERVICE"
+	size = medium
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -50
+	cost = 200
+
+	component_set = "lrsk_avc_aux_ship_collier_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_aux_aura_log_service"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#id = friendly_support_aura_upkeep
+			#id = friendly_support_aura_log_service
+			id = friendly_support_aura_aux
+			priority = 9
+		}
+
+		modifier = {
+			ship_auto_repair_add = 0.04
+			ship_shield_regen_add_perc = 0.1
+			ship_reparation_speed_mult = 0.2
+			ship_upkeep_mult = -0.2
+			ship_emergency_ftl_mult = -0.2
+			ship_reparation_cost_mult = -0.2
+		}
+
+		graphics = {
+			#area_effect = {
+			#	entity = "circle_area_entity"
+			#	dynamic_scale = yes
+			#}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}

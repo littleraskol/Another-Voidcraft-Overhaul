@@ -1,0 +1,122 @@
+﻿l_english:
+
+lrsk_avc_war_monitor:0 "Monitor"
+lrsk_avc_war_monitor_plural:0 "Monitors"
+
+lrsk_avc_war_frigate:0 "Frigate"
+lrsk_avc_war_frigate_plural:0 "Frigates"
+
+lrsk_avc_war_battlecruiser:0 "Battlecruiser"
+lrsk_avc_war_battlecruiser_plural:0 "Battlecruisers"
+
+lrsk_avc_war_battlebarge:0 "Battle-Barge"
+lrsk_avc_war_battlebarge_plural:0 "Battle-Barges"
+
+lrsk_avc_war_aura_category_offensive:0 "Offensive Aura"
+lrsk_avc_war_aura_category_defensive:0 "Defensive Aura"
+
+lrsk_avc_war_ship_small_aura_components:0 "Small Field Emitter"
+lrsk_avc_war_ship_small_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+lrsk_avc_war_ship_medium_aura_components:0 "Medium Field Emitter"
+lrsk_avc_war_ship_medium_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+lrsk_avc_war_ship_large_aura_components:0 "Large Field Emitter"
+lrsk_avc_war_ship_large_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+lrsk_avc_war_ship_xlarge_aura_components:0 "Extra Large Field Emitter"
+lrsk_avc_war_ship_xlarge_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+
+lrsk_avc_war_aura_ftl_dec:0 "$lrsk_avc_war_aura_category_offensive$ - FTL Interdiction"
+
+lrsk_avc_war_aura_hull_inc:0 "$lrsk_avc_war_aura_category_defensive$ - Hull Integrity"
+lrsk_avc_war_aura_hull_regen:0 "$lrsk_avc_war_aura_category_defensive$ - Hull Repair"
+
+lrsk_avc_war_aura_minefield:0 "$lrsk_avc_war_aura_category_offensive$ - Minefield"
+
+lrsk_avc_war_aura_sensor_dec:0 "$lrsk_avc_war_aura_category_offensive$ - Sensor Dampening"
+lrsk_avc_war_aura_sensor_inc:0 "$lrsk_avc_war_aura_category_defensive$ - Sensor Amplification"
+
+lrsk_avc_war_aura_shield_inc:0 "$lrsk_avc_war_aura_category_defensive$ - Shield Integrity"
+lrsk_avc_war_aura_shield_regen:0 "$lrsk_avc_war_aura_category_defensive$ - Shield Regeneration"
+
+lrsk_avc_war_aura_speed_dec:0 "$lrsk_avc_war_aura_category_offensive$ - Sublight Snare"
+lrsk_avc_war_aura_speed_inc:0 "$lrsk_avc_war_aura_category_defensive$ - Sublight Speed"
+
+lrsk_avc_war_aura_weapon_rof_dec:0 "$lrsk_avc_war_aura_category_offensive$ - Weapon Disruption"
+lrsk_avc_war_aura_weapon_rof_inc:0 "$lrsk_avc_war_aura_category_defensive$ - Weapon Amplification"
+
+LRSK_AVC_WAR_MONITOR_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Monitor)"
+LRSK_AVC_WAR_MONITOR_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Monitor)"
+LRSK_AVC_WAR_MONITOR_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Monitor)"
+LRSK_AVC_WAR_MONITOR_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Monitor)"
+LRSK_AVC_WAR_MONITOR_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Monitor)"
+
+LRSK_AVC_WAR_FRIGATE_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Frigate)"
+LRSK_AVC_WAR_FRIGATE_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Frigate)"
+LRSK_AVC_WAR_FRIGATE_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Frigate)"
+LRSK_AVC_WAR_FRIGATE_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Frigate)"
+LRSK_AVC_WAR_FRIGATE_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Frigate)"
+
+LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Battlecruiser)"
+LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Battlecruiser)"
+LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Battlecruiser)"
+LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Battlecruiser)"
+LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Battlecruiser)"
+
+LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Battle-Barge)"
+LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Battle-Barge)"
+LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Battle-Barge)"
+LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Battle-Barge)"
+LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Battle-Barge)"
+
+LRSK_AVC_WAR_AURA_EMPTY:0 "Empty Slot"
+
+LRSK_AVC_WAR_AURA_FTL_DEC:0 "Interdiction Bubble"
+
+LRSK_AVC_WAR_AURA_HULL_INC:0 "Hull Integrity Matrix"
+LRSK_AVC_WAR_AURA_HULL_REGEN:0 "Nanobot Cloud"
+
+LRSK_AVC_WAR_AURA_MINEFIELD_0:0 "Proximity Minefield"
+LRSK_AVC_WAR_AURA_MINEFIELD_1:0 "Proton Minefield"
+LRSK_AVC_WAR_AURA_MINEFIELD_2:0 "Neutron Minefield"
+
+LRSK_AVC_WAR_AURA_SENSOR_DEC:0 "Sensor Dampener"
+LRSK_AVC_WAR_AURA_SENSOR_INC:0 "Sensor Locus"
+
+LRSK_AVC_WAR_AURA_SHIELD_INC:0 "Shield Integrity Matrix"
+LRSK_AVC_WAR_AURA_SHIELD_REGEN:0 "Capacitor Field"
+
+LRSK_AVC_WAR_AURA_SPEED_DEC:0 "Stasis Bubble"
+LRSK_AVC_WAR_AURA_SPEED_INC:0 "Micro-Warp Bubble"
+
+LRSK_AVC_WAR_AURA_WEAPON_ROF_DEC:0 "Quantum Destabilizer"
+LRSK_AVC_WAR_AURA_WEAPON_ROF_INC:0 "Quantum Alignment Field"
+
+LRSK_AVC_WAR_SHIP_MOUNTED:0 "Ship-mounted"
+LRSK_AVC_WAR_AURA_SMALL:0 "Tactical"
+LRSK_AVC_WAR_AURA_MEDIUM:0 "Strategic"
+LRSK_AVC_WAR_AURA_LARGE:0 "Command"
+LRSK_AVC_WAR_AURA_XLARGE:0 "Battlespace"
+
+LRSK_AVC_WAR_SHIP_AURA_SMALL_EMPTY:0 "$AURA_EMPTY$"
+LRSK_AVC_WAR_SHIP_AURA_MEDIUM_EMPTY:0 "$AURA_EMPTY$"
+LRSK_AVC_WAR_SHIP_AURA_LARGE_EMPTY:0 "$AURA_EMPTY$"
+LRSK_AVC_WAR_SHIP_AURA_XLARGE_EMPTY:0 "$AURA_EMPTY$"
+
+LRSK_AVC_WAR_SHIP_SMALL_AURA_SHIELD_REGEN:0 "$LRSK_AVC_WAR_AURA_SMALL$ $LRSK_AVC_WAR_AURA_SHIELD_REGEN$"
+LRSK_AVC_WAR_SHIP_SMALL_AURA_SENSOR_DEC:0 "$LRSK_AVC_WAR_AURA_SMALL$ $LRSK_AVC_WAR_AURA_SENSOR_DEC$"
+LRSK_AVC_WAR_SHIP_SMALL_AURA_WEAPON_ROF_DEC:0 "$LRSK_AVC_WAR_AURA_SMALL$ $LRSK_AVC_WAR_AURA_WEAPON_ROF_DEC$"
+LRSK_AVC_WAR_SHIP_SMALL_AURA_SPEED_INC:0 "$LRSK_AVC_WAR_AURA_SMALL$ $LRSK_AVC_WAR_AURA_SPEED_INC$"
+
+LRSK_AVC_WAR_SHIP_MEDIUM_AURA_WEAPON_ROF_INC:0 "$LRSK_AVC_WAR_AURA_MEDIUM$ $LRSK_AVC_WAR_AURA_WEAPON_ROF_INC$"
+LRSK_AVC_WAR_SHIP_MEDIUM_AURA_HULL_INC:0 "$LRSK_AVC_WAR_AURA_MEDIUM$ $LRSK_AVC_WAR_AURA_HULL_INC$"
+LRSK_AVC_WAR_SHIP_MEDIUM_AURA_SENSOR_INC:0 "$LRSK_AVC_WAR_AURA_MEDIUM$ $LRSK_AVC_WAR_AURA_SENSOR_INC$"
+LRSK_AVC_WAR_SHIP_MEDIUM_AURA_WEAPON_ROF_DEC:0 "$LRSK_AVC_WAR_AURA_MEDIUM$ $LRSK_AVC_WAR_AURA_WEAPON_ROF_DEC$"
+
+LRSK_AVC_WAR_SHIP_LARGE_AURA_SPEED_DEC:0 "$LRSK_AVC_WAR_AURA_LARGE$ $LRSK_AVC_WAR_AURA_SPEED_DEC$"
+LRSK_AVC_WAR_SHIP_LARGE_AURA_SHIELD_REGEN:0 "$LRSK_AVC_WAR_AURA_LARGE$ $LRSK_AVC_WAR_AURA_SHIELD_REGEN$"
+LRSK_AVC_WAR_SHIP_LARGE_AURA_SENSOR_DEC:0 "$LRSK_AVC_WAR_AURA_LARGE$ $LRSK_AVC_WAR_AURA_SENSOR_DEC$"
+LRSK_AVC_WAR_SHIP_LARGE_AURA_SPEED_INC:0 "$LRSK_AVC_WAR_AURA_LARGE$ $LRSK_AVC_WAR_AURA_SPEED_INC$"
+
+LRSK_AVC_WAR_SHIP_XLARGE_AURA_SENSOR_INC:0 "$LRSK_AVC_WAR_AURA_XLARGE$ $LRSK_AVC_WAR_AURA_SENSOR_INC$"
+LRSK_AVC_WAR_SHIP_XLARGE_AURA_HULL_INC:0 "$LRSK_AVC_WAR_AURA_XLARGE$ $LRSK_AVC_WAR_AURA_HULL_INC$"
+LRSK_AVC_WAR_SHIP_XLARGE_AURA_WEAPON_ROF_INC:0 "$LRSK_AVC_WAR_AURA_XLARGE$ $LRSK_AVC_WAR_AURA_WEAPON_ROF_INC$"
+LRSK_AVC_WAR_SHIP_XLARGE_AURA_SPEED_DEC:0 "$LRSK_AVC_WAR_AURA_XLARGE$ $LRSK_AVC_WAR_AURA_SPEED_DEC$"

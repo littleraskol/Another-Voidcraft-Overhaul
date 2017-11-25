@@ -1,0 +1,17 @@
+﻿l_english:
+
+# Technology - Non-Repeatable
+
+# Engineering
+
+tech_lrsk_avc_aux_ships:0 "Auxiliary Ships"
+tech_lrsk_avc_aux_ships_desc:0 "Development of dedicated auxiliary support vessels will allow for prolonged fleet operations in deep space."
+
+LRSK_AVC_AUX_TECH_UNLOCK_TENDER_TITLE:0 "§HUnlocks Ship Type:§! Tender"
+LRSK_AVC_AUX_TECH_UNLOCK_TENDER_DESC:0 "§HTender§!\nA support ship which provides routine maintenance and/or upkeep for a fleet."
+
+tech_lrsk_avc_aux_logistics_ships:0 "Logistics Ships"
+tech_lrsk_avc_aux_ships_desc:0 "Development of advanced logistics vessels will enable the sustained deployment of vast galactic armadas."
+
+LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_TITLE:0 "§HUnlocks Ship Type:§! Collier"
+LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_DESC:0 "§HCollier§!\nA support ship that can repair and/or supply whole navies."

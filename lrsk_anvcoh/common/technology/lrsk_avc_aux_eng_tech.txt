@@ -1,0 +1,170 @@
+# Advanced Voidcraft Classes: Auxiliaries
+# Engineering Technologies
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Tier Variables
+################################################################################
+
+@tier1cost1 = 360
+@tier1cost2 = 480
+@tier1cost3 = 600
+@tier1cost4 = 720
+
+@tier2cost1 = 1000
+@tier2cost2 = 1400
+@tier2cost3 = 1800
+@tier2cost4 = 2200
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+@tier3cost4 = 6000
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+@tier1weight4 = 85
+
+@tier2weight1 = 75
+@tier2weight2 = 70
+@tier2weight3 = 65
+@tier2weight4 = 60
+
+@tier3weight1 = 50
+@tier3weight2 = 45
+@tier3weight3 = 40
+@tier3weight4 = 35
+
+
+################################################################################
+# Voidcraft
+################################################################################
+
+########## Tenders ##########
+
+tech_lrsk_avc_aux_ships = {
+	icon = "tech_lrsk_avc_auxiliary_ships"
+	cost = @tier1cost4
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	prerequisites = { "tech_spaceport_3" }
+	weight = @tier1weight4
+
+	gateway = ship
+
+	prereqfor_desc = {
+		ship = {
+			title = "LRSK_AVC_AUX_TECH_UNLOCK_TENDER_TITLE"
+			desc = "LRSK_AVC_AUX_TECH_UNLOCK_TENDER_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 15 }
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_lrsk_avc_aux_ships
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 20
+		}
+		modifier = {
+			factor = 3
+			years_passed > 25
+		}
+		modifier = {
+			factor = 4
+			years_passed > 30
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+########## Colliers ##########
+
+tech_lrsk_avc_aux_logistics_ships = {
+	icon = "tech_lrsk_avc_logistics_ships"
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_spaceport_6" }
+	weight = @tier2weight2
+
+	gateway = ship
+
+	prereqfor_desc = {
+		ship = {
+			title = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_TITLE"
+			desc = "LRSK_AVC_AUX_TECH_UNLOCK_LOGISTICS_COLLIER_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 40 }
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_lrsk_avc_aux_logistics_ships
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 60
+		}
+		modifier = {
+			factor = 3
+			years_passed > 65
+		}
+		modifier = {
+			factor = 4
+			years_passed > 70
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 50
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

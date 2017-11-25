@@ -1,0 +1,8 @@
+﻿l_english:
+
+# Scout
+
+LRSK_AVC_SCOUT_PATHFIND:0 "Pathfinding Chassis"
+LRSK_AVC_SCOUT_RECON:0 "Reconnaissance Chassis"
+LRSK_AVC_SCOUT_INTERD:0 "Interdiction Chassis"
+

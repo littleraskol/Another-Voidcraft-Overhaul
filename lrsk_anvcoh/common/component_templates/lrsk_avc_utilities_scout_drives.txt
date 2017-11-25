@@ -1,0 +1,246 @@
+# Advanced Voidcraft Classes: Scouts
+# Ship Components - FTL Drives
+# Author: littleraskol (based on work by King Lemming)
+
+# All of this relegated to TBD until I can figure out some issues with different drive types, altering wormhole behavior.
+#
+#@ftl1 = 10
+#@ftl2 = 15
+#@ftl3 = 30
+#@ftl4 = 45
+#
+#@power1 = -7.5
+#@power2 = -10
+#@power3 = -10
+#@power4 = -15
+#
+##############
+## UTILITIES #
+##############
+#
+#### WARP DRIVES
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_WARP_DRIVE_1"
+#	size = small
+#	icon = "GFX_ship_part_warp_drive_1"
+#	icon_frame = 1
+#	power = @power1
+#	cost = @ftl1
+#	ftl = warp_s
+#	
+#	ai_weight = {
+#		weight = 1
+#	}
+#	
+#	ship_modifier = {
+#		ship_interstellar_speed_mult = 0.2
+#		ship_winddown_mult = -0.2
+#		ship_windup_mult = -0.2
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_warp_drive_1" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_WARP_DRIVE_2"
+#	size = small
+#	icon = "GFX_ship_part_warp_drive_2"
+#	icon_frame = 1
+#	power = @power2
+#	cost = @ftl2
+#	ftl = warp_s
+
+#	ship_modifier = {
+#		ship_ftl_warp_range_mult = 0.5
+#		ship_interstellar_speed_mult = 0.4
+#		ship_winddown_mult = -0.4
+#		ship_windup_mult = -0.4
+#	}
+#	
+#	ai_weight = {
+#		weight = 2
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_warp_drive_2" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_WARP_DRIVE_3"
+#	size = small
+#	icon = "GFX_ship_part_warp_drive_3"
+#	icon_frame = 1
+#	power = @power3
+#	cost = @ftl3
+#	ftl = warp_s
+
+#	ship_modifier = {
+#		ship_ftl_warp_range_mult = 1.0
+#		ship_interstellar_speed_mult = 0.6
+#		ship_winddown_mult = -0.6
+#		ship_windup_mult = -0.6
+#	}
+#	
+#	ai_weight = {
+#		weight = 3
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_warp_drive_3" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#### HYPER DRIVES
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_HYPER_DRIVE_1"
+#	size = small
+#	icon = "GFX_ship_part_hyper_drive_1"
+#	icon_frame = 1
+#	power = @power1
+#	cost = @ftl1
+#	ftl = hyperdrive_s
+#	
+#	ai_weight = {
+#		weight = 1
+#	}
+#	
+#	ship_modifier = {
+#		ship_interstellar_speed_mult = 0.05
+#		ship_windup_mult = -0.25
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }	
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_hyper_drive_1" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_HYPER_DRIVE_2"
+#	size = small
+#	icon = "GFX_ship_part_hyper_drive_2"
+#	icon_frame = 1
+#	power = @power2
+#	cost = @ftl2
+#	ftl = hyperdrive_s
+#	
+#	ship_modifier = {
+#		ship_interstellar_speed_mult = 0.1
+#		ship_windup_mult = -0.5
+#	}
+#	
+#	ai_weight = {
+#		weight = 2
+#	}
+#
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_hyper_drive_2" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_HYPER_DRIVE_3"
+#	size = small
+#	icon = "GFX_ship_part_hyper_drive_3"
+#	icon_frame = 1
+#	power = @power3
+#	cost = @ftl3
+#	ftl = hyperdrive_s
+#	
+#	ship_modifier = {
+#		ship_interstellar_speed_mult = 0.15
+#		ship_windup_mult = -0.75
+#	}
+#	
+#	ai_weight = {
+#		weight = 3
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_hyper_drive_3" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#### WORM HOLE DRIVES
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_WORMHOLE_DRIVE"
+#	size = small
+#	icon = "GFX_ship_part_wormhole"
+#	icon_frame = 1
+#	power = 10
+#	cost = 10
+#	ftl = wormhole_s
+#	
+#	ai_weight = {
+#		weight = 1
+#	}
+#	
+#	modifier = {
+#		ship_ftl_wormhole_speed_mult = 0.2
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_wormhole_generation_1" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#### Jump drives
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_JUMP_DRIVE_1"
+#	size = small
+#	icon = "GFX_ship_part_jump_drive_1"
+#	icon_frame = 1
+#	power = @power4
+#	cost = @ftl4
+#	ftl = jumpdrive_s
+#	
+#	ai_weight = {
+#		weight = 4
+#	}
+#	
+#	ship_modifier = {
+#		ship_winddown_mult = -0.2
+#		ship_windup_mult = -0.2
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_jump_drive_1" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#
+#### Jump drives
+#utility_component_template = {
+#	key = "LRSK_AVC_SCOUT_PSI_JUMP_DRIVE_1"
+#	size = small
+#	icon = "GFX_ship_part_psi_jump_drive_1"
+#	icon_frame = 1
+#	power = @power4
+#	cost = @ftl4
+#	ftl = jumpdrive_s
+#	
+#	ai_weight = {
+#		weight = 5
+#	}
+#	
+#	ship_modifier = {
+#		ship_ftl_jumpdrive_range_mult = 0.50
+#		ship_winddown_mult = -0.2
+#		ship_windup_mult = -0.2
+#	}
+#	
+#	size_restriction = { lrsk_avc_scout }
+#	class_restriction = { shipclass_military }
+#	prerequisites = { "tech_psi_jump_drive_1" "tech_lrsk_avc_scout_ftl_drives" }
+#	component_set = "ftl_components"
+#}
+#

@@ -1,0 +1,15 @@
+# Advanced Voidcraft Classes: Scouts
+# Physics Technologies
+# Author: littleraskol (based on work by King Lemming)
+#
+# All this is deprecated unless I can get variant drives to consistently work.
+#
+#tech_lrsk_avc_scout_ftl_drives = {
+#	cost = 0
+#	area = physics
+#	tier = 0
+#	category = { field_manipulation }
+#	start_tech = yes
+#	
+#	is_reverse_engineerable = no
+#}

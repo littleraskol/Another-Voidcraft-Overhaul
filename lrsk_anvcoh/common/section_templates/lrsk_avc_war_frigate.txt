@@ -1,0 +1,272 @@
+# Advanced Voidcraft Classes
+# Section Templates - Frigate
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# FRIGATE
+################################################################################
+
+######### Bow #########
+
+#ship_section_template = {
+#	key = "LRSK_AVC_WAR_FRIGATE_BOW_ARTILLERY"
+#	ship_size = lrsk_avc_war_frigate
+#	fits_on_slot = bow
+#	entity = "destroyer_bow_L1_entity"
+#	icon = "GFX_ship_part_core_bow"
+#
+#	component_slot = {
+#		name = "LARGE_GUN_01"
+#		slot_size = large
+#		slot_type = weapon
+#		locatorname = "large_gun_01"
+#	}
+#
+#	medium_utility_slots = 4
+#
+#	cost = 150
+#}
+
+#Not going to work unless I can figure out how to resize a cruiser "entity" model for a destroyer-sized part.
+#ship_section_template = {
+#	key = "LRSK_AVC_WAR_FRIGATE_BOW_BROADSIDE"
+#	ship_size = lrsk_avc_war_frigate
+#	fits_on_slot = bow
+#	entity = "cruiser_bow_M2_entity"
+#	icon = "GFX_ship_part_core_bow"
+#
+#	component_slot = {
+#		name = "MEDIUM_GUN_01"
+#		slot_size = medium
+#		slot_type = weapon
+#		locatorname = "medium_gun_01"
+#	}
+#
+#	component_slot = {
+#		name = "MEDIUM_GUN_02"
+#		slot_size = medium
+#		slot_type = weapon
+#		locatorname = "medium_gun_02"
+#	}
+#
+#	medium_utility_slots = 4
+#
+#	cost = 150
+#}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_BOW_GUNSHIP"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = bow
+	entity = "destroyer_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	medium_utility_slots = 4 # was 5
+
+	cost = 150
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_BOW_ESCORT"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = bow
+	entity = "destroyer_bow_S3_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+
+	small_utility_slots = 1 # was 2
+	medium_utility_slots = 4
+
+	cost = 150
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_BOW_AEGIS"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = bow
+	entity = "destroyer_bow_M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	#small_utility_slots = 3
+	medium_utility_slots = 4 # was 2
+	#large_utility_slots = 1
+
+	cost = 150
+}
+
+########## Stern ##########
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_STERN_GUNSHIP"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = stern
+	entity = "destroyer_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	medium_utility_slots = 4 # was 5
+	aux_utility_slots = 1
+
+	cost = 150
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_STERN_ESCORT"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = stern
+	entity = "destroyer_stern_S2_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	medium_utility_slots = 4
+	#large_utility_slots = 1
+	aux_utility_slots = 1
+
+	cost = 150
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_FRIGATE_STERN_SIEGE"
+	ship_size = lrsk_avc_war_frigate
+	fits_on_slot = stern
+	entity = "destroyer_stern_M1_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	medium_utility_slots = 4 # was 5
+	aux_utility_slots = 1
+
+	cost = 150
+}
+
+#ship_section_template = {
+#	key = "LRSK_AVC_WAR_FRIGATE_STERN_AEGIS"
+#	ship_size = lrsk_avc_war_frigate
+#	fits_on_slot = stern
+#	entity = "destroyer_stern_S2_entity"
+#	icon = "GFX_ship_part_core_stern"
+#
+#	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+#
+#	component_slot = {
+#		name = "SMALL_GUN_01"
+#		slot_size = point_defence
+#		slot_type = weapon
+#		locatorname = "small_gun_01"
+#	}
+#
+#	component_slot = {
+#		name = "SMALL_GUN_02"
+#		slot_size = point_defence
+#		slot_type = weapon
+#		locatorname = "small_gun_02"
+#	}
+#
+#	component_slot = {
+#		name = "SMALL_GUN_03"
+#		slot_size = point_defence
+#		slot_type = weapon
+#		locatorname = "small_gun_01"
+#	}
+#
+#	component_slot = {
+#		name = "SMALL_GUN_04"
+#		slot_size = point_defence
+#		slot_type = weapon
+#		locatorname = "small_gun_02"
+#	}
+#
+#	medium_utility_slots = 4
+#	aux_utility_slots = 1 # was 2
+#
+#	cost = 150
+#}

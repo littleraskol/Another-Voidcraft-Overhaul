@@ -1,0 +1,819 @@
+# Advanced Voidcraft Classes: Warships
+# Ship Components - Roles
+# Author: littleraskol (based on work by King Lemming)
+
+@shipSmallAuraRange = 20
+@shipMediumAuraRange = 40
+@shipLargeAuraRange = 60
+@shipXLargeAuraRange = 80
+
+################################################################################
+# ALL SHIPS - Empty slots
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_AURA_SMALL_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_war_ship_small_aura_components"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_AURA_MEDIUM_EMPTY"
+	size = medium
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_war_ship_medium_aura_components"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_AURA_LARGE_EMPTY"
+	size = large
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_war_ship_large_aura_components"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_AURA_XLARGE_EMPTY"
+	size = large
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	cost = 0
+
+	component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+################################################################################
+# MONITOR - Shield Regeneration
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_SMALL_AURA_SHIELD_REGEN"
+	size = large
+	icon = "GFX_ship_part_aura_shield_recharger"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_war_ship_small_aura_components"
+	prerequisites = { "tech_shield_recharge_aura_1" }
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_shield_regen"
+		radius = @shipSmallAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_shield_regen
+			priority = 10
+		}
+
+		modifier = {
+			ship_shield_regen_add_perc = 0.15
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+################################################################################
+# MONITOR - Sensor Dampener
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_SMALL_AURA_SENSOR_DEC"
+	size = small
+	icon = "GFX_ship_part_lrsk_avc_war_aura_sensor_dec"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_war_ship_small_aura_components"
+
+	hostile_aura = {
+		name = "lrsk_avc_war_aura_sensor_dec"
+		radius = @shipSmallAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_aura_sensor_dec
+			priority = 1
+		}
+
+		modifier = {
+			ship_accuracy_add = -5
+			ship_tracking_add = -10
+			ship_weapon_range_mult = -0.1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_negative_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+################################################################################
+# MONITOR - Weapon Disruptor
+################################################################################
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_WAR_SHIP_SMALL_AURA_WEAPON_ROF_DEC"
+#	size = small
+#	icon = "GFX_ship_part_aura_quantum_destabilizer"
+#	icon_frame = 1
+#	power = -25
+#	cost = 100
+#
+#	component_set = "lrsk_avc_war_ship_small_aura_components"
+#	prerequisites = {"tech_aura_quantum_destabilizer"}
+#
+#	hostile_aura = {
+#		name = "lrsk_avc_war_aura_weapon_rof_dec"
+#		radius = @shipSmallAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#			id = hostile_inhibitor_aura_weapon_rof_dec
+#			priority = 1
+#		}
+#
+#		modifier = {
+#			ship_fire_rate_mult = -0.10
+#		}
+#
+#		graphics = {
+#			area_effect = {
+#				entity = "circle_area_entity"
+#				dynamic_scale = yes
+#			}
+#			#ship_effect = {
+#			#	entity = "ship_aura_negative_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 4
+#	}
+#}
+
+################################################################################
+# MONITOR - Speed Boost
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_SMALL_AURA_SPEED_INC"
+	size = extra_large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_speed_inc"
+	icon_frame = 1
+	power = -25
+	cost = 100
+
+	component_set = "lrsk_avc_war_ship_small_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_speed_inc"
+		radius = @shipSmallAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_speed_inc
+			priority = 10
+		}
+
+		modifier = {
+			ship_combat_speed_mult = 0.25
+			ship_speed_mult = 0.25
+			ship_evasion_add = 5
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+################################################################################
+# FRIGATE - Weapon Boost
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_MEDIUM_AURA_WEAPON_ROF_INC"
+	size = medium
+	icon = "GFX_ship_part_lrsk_avc_war_aura_weapon_rof_inc"
+	icon_frame = 1
+	power = -50
+	cost = 150
+
+	component_set = "lrsk_avc_war_ship_medium_aura_components"
+	prerequisites = {"tech_aura_quantum_destabilizer"}
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_weapon_rof_inc"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_weapon_rof_inc
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+################################################################################
+# FRIGATE - Hull Integrity Matrix
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_MEDIUM_AURA_HULL_INC"
+	size = medium
+	icon = "GFX_ship_part_lrsk_avc_war_aura_hull_inc"
+	icon_frame = 1
+	power = -50
+	cost = 150
+
+	component_set = "lrsk_avc_war_ship_medium_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_hull_inc"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_hull_inc
+			priority = 10
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.1
+			ship_armor_add = 5
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+################################################################################
+# FRIGATE - Sensor Booster
+################################################################################
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_WAR_SHIP_MEDIUM_AURA_SENSOR_INC"
+#	size = medium
+#	icon = "GFX_ship_part_lrsk_avc_war_aura_sensor_inc"
+#	icon_frame = 1
+#	power = -50
+#	cost = 150
+#
+#	component_set = "lrsk_avc_war_ship_medium_aura_components"
+#
+#	friendly_aura = {
+#		name = "lrsk_avc_war_aura_sensor_inc"
+#		radius = @shipMediumAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#			id = friendly_support_aura_sensor_inc
+#			priority = 10
+#		}
+#
+#		modifier = {
+#			ship_accuracy_add = 5
+#			ship_tracking_add = 10
+#			ship_weapon_range_mult = 0.1
+#		}
+#
+#		graphics = {
+#			area_effect = {
+#				entity = "circle_area_entity"
+#				dynamic_scale = yes
+#			}
+#			#ship_effect = {
+#			#	entity = "ship_aura_positive_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 3
+#	}
+#}
+
+################################################################################
+# FRIGATE - Weapon Disruptor
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_MEDIUM_AURA_WEAPON_ROF_DEC"
+	size = medium
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	power = -50
+	cost = 150
+
+	component_set = "lrsk_avc_war_ship_medium_aura_components"
+	prerequisites = {"tech_aura_quantum_destabilizer"}
+
+	hostile_aura = {
+		name = "lrsk_avc_war_aura_weapon_rof_dec"
+		radius = @shipMediumAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_aura_weapon_rof_dec
+			priority = 1
+		}
+
+		modifier = {
+			ship_fire_rate_mult = -0.10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_negative_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+################################################################################
+# BATTLECRUISER - Stasis Field
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_LARGE_AURA_SPEED_DEC"
+	size = large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_speed_dec"
+	icon_frame = 1
+	power = -75
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_large_aura_components"
+
+	hostile_aura = {
+		name = "lrsk_avc_war_aura_speed_dec"
+		radius = @shipLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_speed_dec
+			priority = 5
+		}
+
+		modifier = {
+			ship_combat_speed_mult = -0.5
+			ship_speed_mult = -0.25
+			ship_evasion_mult = -0.25
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_negative_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+################################################################################
+# BATTLECRUISER - Shield Regeneration
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_LARGE_AURA_SHIELD_REGEN"
+	size = large
+	icon = "GFX_ship_part_aura_shield_recharger"
+	icon_frame = 1
+	power = -75
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_large_aura_components"
+	prerequisites = { "tech_shield_recharge_aura_1" }
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_shield_regen"
+		radius = @shipLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_shield_regen
+			priority = 10
+		}
+
+		modifier = {
+			ship_shield_regen_add_perc = 0.15
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+
+################################################################################
+# BATTLECRUISER - Sensor Dampener
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_LARGE_AURA_SENSOR_DEC"
+	size = large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_sensor_dec"
+	icon_frame = 1
+	power = -75
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_large_aura_components"
+
+	hostile_aura = {
+		name = "lrsk_avc_war_aura_sensor_dec"
+		radius = @shipLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_aura_sensor_dec
+			priority = 1
+		}
+
+		modifier = {
+			ship_accuracy_add = -5
+			ship_tracking_add = -10
+			ship_weapon_range_mult = -0.1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_negative_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+
+################################################################################
+# BATTLECRUISER - Speed Boost
+################################################################################
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_WAR_SHIP_LARGE_AURA_SPEED_INC"
+#	size = large
+#	icon = "GFX_ship_part_lrsk_avc_war_aura_speed_inc"
+#	icon_frame = 1
+#	power = -75
+#	cost = 200
+#
+#	component_set = "lrsk_avc_war_ship_large_aura_components"
+#
+#	friendly_aura = {
+#		name = "lrsk_avc_war_aura_speed_inc"
+#		radius = @shipLargeAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#			id = friendly_support_aura_speed_inc
+#			priority = 10
+#		}
+#
+#		modifier = {
+#			ship_combat_speed_mult = 0.25
+#			ship_speed_mult = 0.25
+#			ship_evasion_add = 5
+#		}
+#
+#		graphics = {
+#			area_effect = {
+#				entity = "circle_area_entity"
+#				dynamic_scale = yes
+#			}
+#			#ship_effect = {
+#			#	entity = "ship_aura_positive_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 2
+#	}
+#}
+
+################################################################################
+# BATTLE-BARGE - Sensor Booster
+################################################################################
+#
+#utility_component_template = {
+#	key = "LRSK_AVC_WAR_SHIP_XLARGE_AURA_SENSOR_INC"
+#	size = extra_large
+#	icon = "GFX_ship_part_lrsk_avc_war_aura_sensor_inc"
+#	icon_frame = 1
+#	power = -100
+#	cost = 200
+#
+#	component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+#
+#	friendly_aura = {
+#		name = "lrsk_avc_war_aura_sensor_inc"
+#		radius = @shipXLargeAuraRange
+#		apply_on = ships
+#
+#		stack_info = {
+#			id = friendly_support_aura_sensor_inc
+#			priority = 10
+#		}
+#
+#		modifier = {
+#			ship_accuracy_add = 5
+#			ship_tracking_add = 10
+#			ship_weapon_range_mult = 0.1
+#		}
+#
+#		graphics = {
+#			area_effect = {
+#				entity = "circle_area_entity"
+#				dynamic_scale = yes
+#			}
+#			#ship_effect = {
+#			#	entity = "ship_aura_positive_entity"
+#			#	dynamic_scale = no
+#			#}
+#		}
+#	}
+#
+#	ai_weight = {
+#		weight = 3
+#	}
+#}
+
+################################################################################
+# BATTLE-BARGE - Hull Integrity Matrix
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_XLARGE_AURA_HULL_INC"
+	size = extra_large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_hull_inc"
+	icon_frame = 1
+	power = -100
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_hull_inc"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_hull_inc
+			priority = 10
+		}
+
+		modifier = {
+			ship_hitpoints_mult = 0.1
+			ship_armor_add = 5
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+
+################################################################################
+# BATTLE-BARGE - Weapon Boost
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_XLARGE_AURA_WEAPON_ROF_INC"
+	size = extra_large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_weapon_rof_inc"
+	icon_frame = 1
+	power = -100
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+	prerequisites = {"tech_aura_quantum_destabilizer"}
+
+	friendly_aura = {
+		name = "lrsk_avc_war_aura_weapon_rof_inc"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = friendly_support_aura_weapon_rof_inc
+			priority = 10
+		}
+
+		modifier = {
+			ship_fire_rate_mult = 0.10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_positive_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 30
+	}
+}
+
+################################################################################
+# BATTLE-BARGE - Stasis Field
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_WAR_SHIP_XLARGE_AURA_SPEED_DEC"
+	size = extra_large
+	icon = "GFX_ship_part_lrsk_avc_war_aura_speed_dec"
+	icon_frame = 1
+	power = -100
+	cost = 200
+
+	component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+
+	hostile_aura = {
+		name = "lrsk_avc_war_aura_speed_dec"
+		radius = @shipXLargeAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = hostile_inhibitor_speed_dec
+			priority = 5
+		}
+
+		modifier = {
+			ship_combat_speed_mult = -0.5
+			ship_speed_mult = -0.25
+			ship_evasion_mult = -0.25
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			#ship_effect = {
+			#	entity = "ship_aura_negative_entity"
+			#	dynamic_scale = no
+			#}
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}

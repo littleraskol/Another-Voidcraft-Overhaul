@@ -1,0 +1,56 @@
+# Advanced Voidcraft Classes: Auxiliaries
+# Ship Entities - Plantoid
+# Author: littleraskol (based on work by King Lemming)
+
+@tender_scale = 0.8
+@tender_size = 9.6
+@collier_scale = 1.2
+@collier_size = 18.0
+
+################################################################################
+# AUXILIARY
+################################################################################
+
+############ Tender ############
+
+entity = {
+	name = "plantoid_01_lrsk_avc_aux_tender_entity"
+	pdxmesh = "plantoid_01_corvette_frame_mesh"
+
+	default_state = idle
+	state = { name = "idle"	 						animation = "idle" animation_blend_time = 0 }
+	state = { name = "moving"						animation = "idle" animation_blend_time = 2 }
+	state = { name = "working" 						animation = "idle" looping = no next_state = working_looping }
+	state = { name = "working_looping"				animation = "idle" }
+	state = { name = "death" animation = "death3" 	animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" }
+	}
+
+	scale = @tender_scale
+
+	game_data = {
+		size = @tender_size
+	}
+}
+
+############ Collier ############
+
+entity = {
+	name = "plantoid_01_lrsk_avc_aux_collier_entity"
+	pdxmesh = "plantoid_01_destroyer_frame_mesh"
+
+	default_state = idle
+	state = { name = "idle"	 						animation = "idle" animation_blend_time = 0 }
+	state = { name = "moving"						animation = "idle" animation_blend_time = 2 }
+	state = { name = "working" 						animation = "idle" looping = no next_state = working_looping }
+	state = { name = "working_looping"				animation = "idle" }
+	state = { name = "death" animation = "death3" 	animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" }
+	}
+
+	scale = @collier_scale
+
+	game_data = {
+		size = @collier_size
+	}
+}

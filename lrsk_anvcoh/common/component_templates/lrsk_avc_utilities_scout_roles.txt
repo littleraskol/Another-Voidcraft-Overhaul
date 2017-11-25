@@ -1,0 +1,123 @@
+# Advanced Voidcraft Classes: Scouts
+# Ship Components - Roles
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# SCOUT
+################################################################################
+
+utility_component_template = {
+	key = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_1"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	cost = 0
+	class_restriction = { shipclass_military }
+	size_restriction = { lrsk_avc_scout }
+	component_set = "lrsk_avc_scout_combat_computers_components"
+	ship_behavior = "destroyer_default"
+	upgrades_to = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_2"
+
+	modifier = {
+		#ship_evasion_mult = 2.5
+		@ship_sensor_range_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_2"
+	size = small
+	icon = "GFX_ship_part_computer_aggressive_basic"
+	icon_frame = 1
+	power = -20
+	cost = 5
+	class_restriction = { shipclass_military }
+	size_restriction = { lrsk_avc_scout }
+	component_set = "lrsk_avc_scout_combat_computers_components"
+	ship_behavior = "destroyer_default"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_3"
+
+	modifier = {
+		ship_evasion_mult = 0.025
+		ship_sensor_range_mult = 0.1
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_3"
+	size = small
+	icon = "GFX_ship_part_computer_aggressive_advanced"
+	icon_frame = 1
+	power = -30
+	cost = 10
+	class_restriction = { shipclass_military }
+	size_restriction = { lrsk_avc_scout }
+	component_set = "lrsk_avc_scout_combat_computers_components"
+	ship_behavior = "destroyer_default"
+	prerequisites = { "tech_combat_computers_2" }
+
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_sensor_range_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_4"
+	size = small
+	icon = "GFX_ship_part_computer_sentient"
+	icon_frame = 1
+	power = -50
+	cost = 20
+	class_restriction = { shipclass_military }
+	size_restriction = { lrsk_avc_scout }
+	component_set = "lrsk_avc_scout_combat_computers_components"
+	ship_behavior = "destroyer_default"
+	prerequisites = { "tech_combat_computers_3" }
+
+	modifier = {
+		ship_evasion_mult = 0.075
+		ship_sensor_range_mult = 0.3
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "LRSK_AVC_SCOUT_COMBAT_COMPUTER_PRECOG"
+	size = small
+	icon = "GFX_ship_part_computer_pregoc"
+	icon_frame = 1
+	power = -60
+	cost = 25
+	class_restriction = { shipclass_military }
+	size_restriction = { lrsk_avc_scout }
+	component_set = "lrsk_avc_scout_combat_computers_components"
+	ship_behavior = "destroyer_default"
+	prerequisites = { "tech_precognition_interface" }
+
+	modifier = {
+		ship_evasion_mult = 0.1
+		ship_sensor_range_mult = 0.2
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}

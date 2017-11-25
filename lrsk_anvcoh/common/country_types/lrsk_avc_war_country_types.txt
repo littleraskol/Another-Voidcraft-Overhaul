@@ -1,0 +1,522 @@
+# Advanced Voidcraft Classes: Warships
+# Country Types - Default
+# Author: littleraskol (based on work by King Lemming)
+
+default = {
+	has_fortifications = yes
+	can_have_orbital_stations = yes
+	has_difficulty_bonuses = yes
+	counts_for_victory = yes
+	pop_growth = yes
+	playable = yes
+	randomize_ethos = yes
+	shuffle_pop_ethos = yes
+	diplomatic_wars = yes
+	relations = yes
+	distant_ftl_cost_mult = 1.0
+
+	ai = {
+		enabled = yes
+		declare_war = yes
+		min_navy_for_wars = 0.5
+		min_assault_armies_for_wars = 10
+		colonizer = yes
+		internal_policies = yes
+		government = yes
+		traditions = yes
+		construction = yes
+		modules = {
+			military_minister_module
+			foreign_minister_module
+			interior_minister_module
+		}
+
+		ship_data = {
+			constructor = {
+				min = 1
+				max = 3
+				planet_mult = 0.25
+			}
+
+			science	= {
+				min = 2
+				max = 3
+				planet_mult = 0.25
+			}
+
+			colonizer = {
+				min = 1
+				max = 1
+			}
+
+			battleship = {
+				fraction = {
+					modifier = {
+						add = 25
+						has_technology = tech_spaceport_6
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_lrsk_avc_war_battlebarge
+					}
+				}
+				# Final: 20
+			}
+
+			lrsk_avc_war_battlebarge = {
+				fraction = {
+					modifier = {
+						add = 5
+						has_technology = tech_lrsk_avc_war_battlebarge
+					}
+					# Final: 5
+				}
+			}
+
+			cruiser = {
+				fraction = {
+					modifier = {
+						add = 35
+						has_technology = tech_spaceport_5
+					}
+					modifier = {
+						add = -10
+						has_technology = tech_spaceport_6
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_lrsk_avc_war_battlecruiser
+					}
+				}
+				# Final: 20
+			}
+
+			lrsk_avc_war_battlecruiser = {
+				fraction = {
+					modifier = {
+						add = 5
+						has_technology = tech_lrsk_avc_war_battlecruiser
+					}
+					# Final: 5
+				}
+			}
+
+			destroyer = {
+				fraction = {
+					modifier = {
+						add = 35
+						has_technology = tech_spaceport_3
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_spaceport_5
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_spaceport_6
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_lrsk_avc_war_frigate
+					}
+				}
+				# Final: 20
+			}
+
+			lrsk_avc_war_frigate = {
+				fraction = {
+					modifier = {
+						add = 20
+						has_technology = tech_lrsk_avc_war_frigate
+					}
+					modifier = {
+						add = -10
+						has_technology = tech_spaceport_5
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_spaceport_6
+					}
+					# Final: 5
+				}
+			}
+
+			corvette = {
+				fraction = {
+					base = 100
+					modifier = {
+						add = -35
+						has_technology = tech_spaceport_3
+					}
+					modifier = {
+						add = -30
+						has_technology = tech_spaceport_5
+					}
+					modifier = {
+						add = -10
+						has_technology = tech_spaceport_6
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_lrsk_avc_war_monitor
+					}
+					# Final: 20
+				}
+			}
+
+			lrsk_avc_war_monitor = {
+				fraction = {
+					modifier = {
+						add = 30
+						has_technology = tech_lrsk_avc_war_monitor
+					}
+					modifier = {
+						add = -10
+						has_technology = tech_spaceport_3
+					}
+					modifier = {
+						add = -10
+						has_technology = tech_spaceport_5
+					}
+					modifier = {
+						add = -5
+						has_technology = tech_spaceport_6
+					}
+					# Final: 5
+				}
+			}
+		}
+
+		army_data = {
+			defense_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = 10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+				}
+			}
+
+			assault_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							has_technology = tech_cloning
+							has_technology = tech_telepathy
+							has_technology = tech_synthetic_workers
+							has_technology = tech_gene_seed_purification
+							AND = {
+								exists = ruler
+								ruler = {
+									has_leader_flag = has_elite_guard
+								}
+								OR = {
+									has_government = gov_despotic_hegemony
+									has_government = gov_illuminated_autocracy
+								}
+							}
+						}
+					}
+				}
+			}
+
+			slave_army = {
+				fraction = {
+					factor = 20
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = {
+								AND = {
+									has_ai_personality_behaviour = slaver
+									has_technology = tech_neural_implants
+								}
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+							NOT = {
+								any_owned_planet = {
+									has_building = building_slave_processing
+								}
+							}
+						}
+					}
+				}
+			}
+
+			robotic_army = {
+				fraction = {
+					factor = 20
+					modifier = {
+						factor = 0
+						NOT = {
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+				}
+			}
+
+			clone_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = {
+								has_technology = tech_cloning
+							}
+							has_technology = tech_telepathy
+							has_technology = tech_synthetic_workers
+							has_technology = tech_gene_seed_purification
+							AND = {
+								exists = ruler
+								ruler = {
+									has_leader_flag = has_elite_guard
+								}
+								OR = {
+									has_government = gov_despotic_hegemony
+									has_government = gov_illuminated_autocracy
+								}
+							}
+						}
+					}
+				}
+			}
+
+			psionic_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = {
+								has_technology = tech_telepathy
+							}
+							has_technology = tech_synthetic_workers
+							has_technology = tech_gene_seed_purification
+							AND = {
+								exists = ruler
+								ruler = {
+									has_leader_flag = has_elite_guard
+								}
+								OR = {
+									has_government = gov_despotic_hegemony
+									has_government = gov_illuminated_autocracy
+								}
+							}
+						}
+					}
+				}
+			}
+
+			android_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = {
+								has_technology = tech_synthetic_workers
+							}
+							has_technology = tech_gene_seed_purification
+							AND = {
+								exists = ruler
+								ruler = {
+									has_leader_flag = has_elite_guard
+								}
+								OR = {
+									has_government = gov_despotic_hegemony
+									has_government = gov_illuminated_autocracy
+								}
+							}
+						}
+					}
+				}
+			}
+
+			gene_warrior_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = {
+								has_technology = tech_gene_seed_purification
+							}
+							AND = {
+								exists = ruler
+								ruler = {
+									has_leader_flag = has_elite_guard
+								}
+								OR = {
+									has_government = gov_despotic_hegemony
+									has_government = gov_illuminated_autocracy
+								}
+							}
+						}
+					}
+				}
+			}
+
+			elite_guard_army = {
+				fraction = {
+					factor = 50
+					modifier = {
+						add = -20
+						OR = {
+							AND = {
+								has_ai_personality_behaviour = slaver
+								has_technology = tech_neural_implants
+							}
+							AND = {
+								has_ai_personality_behaviour = robot_exploiter
+								has_technology = tech_droid_workers
+							}
+						}
+					}
+					modifier = {
+						add = -10
+						OR = {
+							has_ethic = ethic_pacifist
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					modifier = {
+						factor = 0
+						exists = ruler
+						NOT = {
+							ruler = {
+								has_leader_flag = has_elite_guard
+							}
+							OR = {
+								has_government = gov_despotic_hegemony
+								has_government = gov_illuminated_autocracy
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	modules = {
+		standard_event_module = {}
+		standard_economy_module = {}
+		standard_leader_module = {}
+		standard_diplomacy_module = {}
+		standard_technology_module = {}
+		standard_pop_factions_module = {}
+		standard_expansion_module = {}
+		standard_species_rights_module = {}
+	}
+}

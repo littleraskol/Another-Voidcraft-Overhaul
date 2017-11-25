@@ -1,0 +1,88 @@
+﻿l_english:
+
+lrsk_avc_scout:0 "Scout"
+lrsk_avc_scout_plural:0 "Scouts"
+
+lrsk_avc_aura_category_offensive:0 "Offensive Aura"
+lrsk_avc_aura_category_defensive:0 "Defensive Aura"
+
+lrsk_avc_ship_scout_aura_components:0 "Scout Field Emitter"
+lrsk_avc_ship_scout_aura_components_DESC:0 "Field Emitters project and maintain localized fields that induce various effects in enemy or friendly vessels."
+
+lrsk_avc_ship_scout_sensor_components:0 "Scout Sensors"
+lrsk_avc_ship_scout_sensor_components_DESC:0 "Sensors for scouts will reveal the details of any systems and fleets at long range."
+
+LRSK_AVC_SCOUT_OBSERVATORY_1:0 "Radar System"
+LRSK_AVC_SCOUT_OBSERVATORY_1_DESC:1 "A planet-bound technology adapted for use in deep space, this radar system provides longer-ranged detection and tracking capability for scouting vessels."
+LRSK_AVC_SCOUT_OBSERVATORY_2:0 "Gravitic Sensors"
+LRSK_AVC_SCOUT_OBSERVATORY_2_DESC:0 "These sensors have been tuned to look for any gravitational changes in space, such as those produced by the presence of a starship."
+LRSK_AVC_SCOUT_OBSERVATORY_3:0 "Subspace Sensors"
+LRSK_AVC_SCOUT_OBSERVATORY_3_DESC:0 "Sensors that detect the subspace fluctuations left in the wake of traveling starships. Their sensitivity and range is greater than that of a gravitic sensor array."
+LRSK_AVC_SCOUT_OBSERVATORY_4:0 "Tachyon Sensors"
+LRSK_AVC_SCOUT_OBSERVATORY_4_DESC:0 "Advanced sensors that rely on rotating tachyon beams to detect ship movements even at extreme distances."
+
+LRSK_AVC_SCOUT_SHIP_SENSOR_1:0 "$LRSK_AVC_SHIP_MOUNTED$ $LRSK_AVC_SCOUT_OBSERVATORY_1$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_1_DESC:0 "$LRSK_AVC_SCOUT_OBSERVATORY_1_DESC$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_2:0 "$LRSK_AVC_SHIP_MOUNTED$ $LRSK_AVC_SCOUT_OBSERVATORY_2$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_2_DESC:0 "$LRSK_AVC_SCOUT_OBSERVATORY_2_DESC$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_3:0 "$LRSK_AVC_SHIP_MOUNTED$ $LRSK_AVC_SCOUT_OBSERVATORY_3$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_3_DESC:0 "$LRSK_AVC_SCOUT_OBSERVATORY_3_DESC$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_4:0 "$LRSK_AVC_SHIP_MOUNTED$ $LRSK_AVC_SCOUT_OBSERVATORY_4$"
+LRSK_AVC_SCOUT_SHIP_SENSOR_4_DESC:0 "$LRSK_AVC_SCOUT_OBSERVATORY_4_DESC$"
+
+lrsk_avc_ship_scout_thruster_components:0 "Scout Thrusters"
+lrsk_avc_ship_scout_thruster_components_DESC:0 "Thrusters are used for sub-FTL propulsion. Scouting variants emphasize evasiveness over performance in combat."
+
+LRSK_AVC_SCOUT_SHIP_THRUSTER_1:0 "Chemical Thrusters"
+LRSK_AVC_SCOUT_SHIP_THRUSTER_1_DESC:0 "Simple yet maneuverable chemical thrusters that rely on combustible propellant to generate thrust."
+LRSK_AVC_SCOUT_SHIP_THRUSTER_2:0 "Ion Thrusters"
+LRSK_AVC_SCOUT_SHIP_THRUSTER_2_DESC:0 "These electric thrusters use beams of ions to generate thrust without the need for propellant."
+LRSK_AVC_SCOUT_SHIP_THRUSTER_3:0 "Plasma Thrusters"
+LRSK_AVC_SCOUT_SHIP_THRUSTER_3_DESC:0 "An advanced form of electric propulsion, plasma thrusters afford ships greater sublight speeds and maneuverability."
+LRSK_AVC_SCOUT_SHIP_THRUSTER_4:0 "Impulse Thrusters"
+LRSK_AVC_SCOUT_SHIP_THRUSTER_4_DESC:0 "These highly advanced fusion-powered thrusters provide ships with unmatched maneuverability and speed under sublight conditions."
+
+lrsk_avc_scout_combat_computers_components:0 "Scout Computers"
+lrsk_avc_scout_combat_computers_components_DESC:0 "Scouting vessels have on-board analytic computers dedicated to enhancing observation range through better sensor data processing. "
+
+lrsk_avc_aura_sensor_inc:0 "$lrsk_avc_aura_category_defensive$ - Sensor Amplification"
+
+lrsk_avc_aura_scout_marker:0 "$lrsk_avc_aura_category_defensive$ - Targeting Enhancement"
+lrsk_avc_aura_scout_nav:0 "$lrsk_avc_aura_category_defensive$ - FTL Navigation Aid"
+
+LRSK_AVC_SCOUT_COMBAT_COMPUTER_1:0 "Basic Recon Computer (Scout)"
+LRSK_AVC_SCOUT_COMBAT_COMPUTER_2:0 "Intermediate Recon Computer (Scout)"
+LRSK_AVC_SCOUT_COMBAT_COMPUTER_3:0 "Advanced Recon Computer (Scout)"
+LRSK_AVC_SCOUT_COMBAT_COMPUTER_4:0 "Sentient Recon Computer (Scout)"
+LRSK_AVC_SCOUT_COMBAT_COMPUTER_PRECOG:0 "Precognitive Scanning (Scout)"
+
+LRSK_AVC_AURA_EMPTY:0 "Empty Slot"
+
+LRSK_AVC_AURA_SCOUT_MARKER:0 "Target Marker"
+LRSK_AVC_AURA_SCOUT_NAV:0 "Fleet Navigator"
+
+LRSK_AVC_AURA_SCOUT:0 "Recon"
+
+LRSK_AVC_SHIP_SCOUT_AURA_DEFAULT:0 "$LRSK_AVC_AURA_EMPTY$"
+LRSK_AVC_SHIP_SCOUT_AURA_MARKER:0 "$LRSK_AVC_AURA_SCOUT$ $LRSK_AVC_AURA_SCOUT_MARKER$"
+LRSK_AVC_SHIP_SCOUT_AURA_NAV:0 "$LRSK_AVC_AURA_SCOUT$ $LRSK_AVC_AURA_SCOUT_NAV$"
+
+#LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT: "Versions optimized for the light frames of scout vessels accomplish this much faster."
+#LRSK_AVC_SCOUT_WARP_DRIVE_1:0 "Recon Warp Drive I"
+#LRSK_AVC_SCOUT_WARP_DRIVE_1_DESC:1 "Warp Drives allow FTL travel to and from the edges of star systems, with limited range and wind-up and wind-down periods at departure and arrival. $LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT$"
+#LRSK_AVC_SCOUT_WARP_DRIVE_2:0 "Recon Warp Drive II"
+#LRSK_AVC_SCOUT_WARP_DRIVE_2_DESC:1 "$SCOUT_WARP_DRIVE_1_DESC$"
+#LRSK_AVC_SCOUT_WARP_DRIVE_3:0 "Recon Warp Drive III"
+#LRSK_AVC_SCOUT_WARP_DRIVE_3_DESC:1 "$SCOUT_WARP_DRIVE_1_DESC$"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_1:0 "Recon Hyper Drive I"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_1_DESC:1 "Ships equipped with Hyper Drives can only travel along interstellar hyperlanes, but are capable of accelerating to FTL from anywhere in a system.  $LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT$"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_2:0 "Recon Hyper Drive II"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_2_DESC:1 "$SCOUT_HYPER_DRIVE_1_DESC$"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_3:0 "Recon Hyper Drive III"
+#LRSK_AVC_SCOUT_HYPER_DRIVE_3_DESC:1 "$SCOUT_HYPER_DRIVE_1_DESC$"
+#LRSK_AVC_SCOUT_JUMP_DRIVE_1:0 "Recon Jump Drive"
+#LRSK_AVC_SCOUT_JUMP_DRIVE_1_DESC:1 "The Jump Drive tears ship-sized holes in the very fabric of reality, allowing for near-instantaneous movement between systems. The nature of the space the ship passes through on this journey is still poorly understood.  $LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT$"
+#LRSK_AVC_SCOUT_PSI_JUMP_DRIVE_1:0 "Recon Psi Jump Drive"
+#LRSK_AVC_SCOUT_PSI_JUMP_DRIVE_1_DESC:1 "The Psi Jump Drive harnesses the psionic potential of the ship's crew to warp the local space-time continuum, eliminating the distance between the point of origin and the destination. Supposedly.  $LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT$"
+#LRSK_AVC_SCOUT_WORMHOLE_DRIVE:0 "Recon Wormhole Modulator"
+#LRSK_AVC_SCOUT_WORMHOLE_DRIVE_DESC:0 "Ships equipped with Wormhole Modulators attune the portals created by Wormhole Generators to allow for passage between systems. $LRSK_AVC_SCOUT_DRIVE_ADDON_TEXT$"

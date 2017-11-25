@@ -1,0 +1,661 @@
+# Advanced Voidcraft Classes
+# Section Templates - Battle-Barge
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# BATTLE-BARGE
+################################################################################
+
+######### Bow #########
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_BROADSIDE"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = bow
+	entity = "battleship_bow_M3S2_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	large_utility_slots = 3
+	aux_utility_slots = 2
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_DEVASTATOR"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = bow
+	entity = "battleship_bow_XL1_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	#prerequisites = { tech_energy_lance_1 tech_energy_lance_2 tech_arc_emitter_1 tech_arc_emitter_2 tech_mass_accelerator_1 tech_mass_accelerator_2 tech_cruise_missiles_1 tech_cruise_missiles_2}
+
+	prerequisites = { tech_energy_lance_1 tech_energy_lance_2 tech_arc_emitter_1 tech_arc_emitter_2 tech_mass_accelerator_1 tech_mass_accelerator_2 }
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		slot_size = extra_large
+		slot_type = weapon
+		locatorname = "xl_gun_01"
+	}
+
+	large_utility_slots = 2
+	aux_utility_slots = 2
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_CARRIER"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = bow
+	entity = "battleship_bow_M1S2SHB_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	large_utility_slots = 3 # was 2
+	aux_utility_slots = 2
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_AEGIS"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = bow
+	entity = "battleship_bow_M2S4_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_04"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 2
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_HARRIER"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = bow
+	entity = "battleship_bow_L1S4_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	#prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+
+		component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04"
+	}
+
+	large_utility_slots = 4
+	aux_utility_slots = 2
+
+	cost = 600
+}
+
+######### Mid #########
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_BROADSIDE"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = mid
+	entity = "battleship_mid_L1M4_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	large_utility_slots = 6 # was 5
+	#aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_SIEGE"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = mid
+	entity = "battleship_mid_L1M4_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { tech_torpedoes_1 tech_torpedoes_2 tech_torpedoes_3 tech_energy_torpedoes_1 tech_energy_torpedoes_2 }
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "TORPEDO_04"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	large_utility_slots = 6 # was 5
+	#aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_ARTILERY"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = mid
+	entity = "battleship_mid_L3_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_03"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_03"
+	}
+
+	large_utility_slots = 6 # was 5
+	#aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_CARRIER"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = mid
+	entity = "battleship_mid_M4SHB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_03"
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_04"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	large_utility_slots = 6 # was 5
+	#aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_MOTHERSHIP"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = mid
+	entity = "battleship_mid_S4LHB_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	#prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+
+		component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = 90
+		locatorname = "strike_craft_locator_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		slot_size = large
+		slot_type = strike_craft
+		rotation = -90
+		locatorname = "strike_craft_locator_02"
+	}
+
+	large_utility_slots = 6 # was 5
+	#aux_utility_slots = 1
+
+	cost = 600
+}
+
+######### Stern #########
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_BROADSIDE"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = stern
+	entity = "battleship_stern_M2_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+
+	}
+
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	large_utility_slots = 2 # was 6
+	aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_SIEGE"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = stern
+	entity = "battleship_stern_M2_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	prerequisites = { tech_torpedoes_1 tech_torpedoes_2 tech_torpedoes_3 tech_energy_torpedoes_1 tech_energy_torpedoes_2 }
+
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+		slot_type = weapon
+		locatorname = "medium_gun_02"
+	}
+
+	large_utility_slots = 2 # was 6
+	aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_ARTILERY"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = stern
+	entity = "battleship_stern_L1_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		slot_size = large
+		slot_type = weapon
+		locatorname = "large_gun_01"
+	}
+
+	large_utility_slots = 2 # was 6
+	aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_AEGIS"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = stern
+	entity = "battleship_stern_M1S2_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		slot_size = medium
+		slot_type = weapon
+		locatorname = "medium_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = point_defence
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	large_utility_slots = 3 # was 5
+	aux_utility_slots = 1
+
+	cost = 600
+}
+
+ship_section_template = {
+	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_HARRIER"
+	ship_size = lrsk_avc_war_battlebarge
+	fits_on_slot = stern
+	entity = "battleship_stern_S4_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	#prerequisites = { tech_pd_tracking_1 tech_pd_tracking_2 tech_pd_tracking_3 }
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_03"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_04"
+		slot_size = small
+		slot_type = weapon
+		locatorname = "small_gun_04"
+	}
+
+	large_utility_slots = 3 # was 6
+	aux_utility_slots = 1
+
+	cost = 600
+}

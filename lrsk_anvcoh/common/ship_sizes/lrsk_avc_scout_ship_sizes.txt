@@ -1,0 +1,54 @@
+# Advanced Voidcraft Classes: Scouts
+# Scouts Ship Sizes
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Ship Variables
+################################################################################
+
+@scout_combat_speed = 0.5
+@scout_collision_radius = 1.56
+
+@aux_formation_priority = 6
+
+################################################################################
+# SCOUT
+################################################################################
+
+# A fast, light intelligence vessel.
+
+lrsk_avc_scout = {
+	max_speed = 5.75
+	acceleration = 0.4
+	rotation_speed = 0.2
+	combat_max_speed = @scout_combat_speed
+	combat_rotation_speed = 0.1
+	collision_radius = @scout_collision_radius
+	modifier = {
+		ship_evasion_add = 75
+		ship_emergency_ftl_mult = -0.5		#Not sure this actually works...
+	}
+	max_hitpoints = 200
+	size_multiplier = 1
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	prerequisites = { "tech_spaceport_1" }
+	num_target_locators = 1
+	is_space_station = no
+	icon_frame = 2
+	base_buildtime = 30
+	required_spaceport_level = 1
+	#can_have_federation_design = no
+	can_have_federation_design = YES
+	enable_default_design = yes
+	#is_civilian = yes
+	is_designable = yes
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "lrsk_avc_scout_combat_computers_components"
+	required_component_set = "lrsk_avc_ship_scout_thruster_components"
+	required_component_set = "lrsk_avc_ship_scout_sensor_components"
+	required_component_set = "lrsk_avc_ship_scout_aura_components"
+	valid_target_aggressive_stance = no
+}
