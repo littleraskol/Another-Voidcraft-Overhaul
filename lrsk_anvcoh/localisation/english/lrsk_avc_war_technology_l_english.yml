@@ -22,8 +22,8 @@ tech_lrsk_avc_war_battlecruiser_desc:0 "Applying new engineering techniques to C
 LRSK_AVC_WAR_TECH_UNLOCK_BATTLECRUISERS_TITLE:0 "§HUnlocks Ship Type:§! Battlecruiser"
 LRSK_AVC_WAR_TECH_UNLOCK_BATTLECRUISERS_DESC:0 "§HBattlecruiser§!\nA large, versitle warship intended to bolster friendly ships in the thickest fighting."
 
-tech_lrsk_avc_war_battlebarge:0 "Advanced Battleships"
-tech_lrsk_avc_war_battlebarge_desc:0 "Applying new engineering techniques to Battleship-class vessels will allow for the construction of more advanced variants."
+tech_lrsk_avc_war_arsenalship:0 "Advanced Battleships"
+tech_lrsk_avc_war_arsenalship_desc:0 "Applying new engineering techniques to Battleship-class vessels will allow for the construction of more advanced variants."
 
-LRSK_AVC_WAR_TECH_UNLOCK_DREADNAUGHTS_TITLE:0 "§HUnlocks Ship Type:§! Battle-Barge"
-LRSK_AVC_WAR_TECH_UNLOCK_DREADNAUGHTS_DESC:0 "§HBattle-Barge§!\nThe biggest and meanest warship of any fleet, made for nothing less than total battlespace control."
+LRSK_AVC_WAR_TECH_UNLOCK_ARSENALSHIP_TITLE:0 "§HUnlocks Ship Type:§! Arsenal Ship"
+LRSK_AVC_WAR_TECH_UNLOCK_ARSENALSHIP_DESC:0 "§HArsenal Ship§!\nThe biggest and meanest warship of any fleet, made for nothing less than total battlespace control."

@@ -1,5 +1,5 @@
 # Advanced Voidcraft Classes
-# Section Templates - Battle-Barge
+# Section Templates - Arsenal Ship
 # Author: littleraskol (based on work by King Lemming)
 
 ################################################################################
@@ -9,8 +9,8 @@
 ######### Bow #########
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_BROADSIDE"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_BOW_BROADSIDE"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = bow
 	entity = "battleship_bow_M3S2_entity"
 	icon = "GFX_ship_part_core_bow"
@@ -57,8 +57,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_DEVASTATOR"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_BOW_DEVASTATOR"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = bow
 	entity = "battleship_bow_XL1_entity"
 	icon = "GFX_ship_part_core_bow"
@@ -88,8 +88,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_CARRIER"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_BOW_CARRIER"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = bow
 	entity = "battleship_bow_M1S2SHB_entity"
 	icon = "GFX_ship_part_core_bow"
@@ -138,8 +138,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_AEGIS"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_BOW_AEGIS"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = bow
 	entity = "battleship_bow_M2S4_entity"
 	icon = "GFX_ship_part_core_bow"
@@ -195,8 +195,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_BOW_HARRIER"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_BOW_HARRIER"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = bow
 	entity = "battleship_bow_L1S4_entity"
 	icon = "GFX_ship_part_core_bow"
@@ -247,8 +247,8 @@ ship_section_template = {
 ######### Mid #########
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_BROADSIDE"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_MID_BROADSIDE"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = mid
 	entity = "battleship_mid_L1M4_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -295,8 +295,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_SIEGE"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_MID_SIEGE"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = mid
 	entity = "battleship_mid_L1M4_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -345,8 +345,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_ARTILERY"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_MID_ARTILERY"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = mid
 	entity = "battleship_mid_L3_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -379,8 +379,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_CARRIER"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_MID_CARRIER"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = mid
 	entity = "battleship_mid_M4SHB_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -436,8 +436,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_MID_MOTHERSHIP"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_MID_MOTHERSHIP"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = mid
 	entity = "battleship_mid_S4LHB_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -505,8 +505,8 @@ ship_section_template = {
 ######### Stern #########
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_BROADSIDE"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_STERN_BROADSIDE"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = stern
 	entity = "battleship_stern_M2_entity"
 	icon = "GFX_ship_part_core_stern"
@@ -533,8 +533,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_SIEGE"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_STERN_SIEGE"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = stern
 	entity = "battleship_stern_M2_entity"
 	icon = "GFX_ship_part_core_stern"
@@ -562,8 +562,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_ARTILERY"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_STERN_ARTILERY"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = stern
 	entity = "battleship_stern_L1_entity"
 	icon = "GFX_ship_part_core_stern"
@@ -582,8 +582,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_AEGIS"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_STERN_AEGIS"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = stern
 	entity = "battleship_stern_M1S2_entity"
 	icon = "GFX_ship_part_core_stern"
@@ -618,8 +618,8 @@ ship_section_template = {
 }
 
 ship_section_template = {
-	key = "LRSK_AVC_WAR_BATTLEBARGE_STERN_HARRIER"
-	ship_size = lrsk_avc_war_battlebarge
+	key = "LRSK_AVC_WAR_ARSENALSHIP_STERN_HARRIER"
+	ship_size = lrsk_avc_war_arsenalship
 	fits_on_slot = stern
 	entity = "battleship_stern_S4_entity"
 	icon = "GFX_ship_part_core_stern"

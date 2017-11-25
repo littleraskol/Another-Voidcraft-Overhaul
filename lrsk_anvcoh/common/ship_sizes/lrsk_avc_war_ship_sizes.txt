@@ -21,10 +21,10 @@
 @battlecruiser_collision_radius = 3.55
 @battlecruiser_formation_priority = 3
 
-@battlebarge_combat_speed = 0.75
-@battlebarge_combat_rotation = 0.025
-@battlebarge_collision_radius = 4.5
-@battlebarge_formation_priority = 5
+@arsenalship_combat_speed = 0.75
+@arsenalship_combat_rotation = 0.025
+@arsenalship_collision_radius = 4.5
+@arsenalship_formation_priority = 5
 
 ################################################################################
 # MONITOR
@@ -160,14 +160,14 @@ lrsk_avc_war_battlecruiser = {
 
 # A heavy, versatile battleship-sized class
 
-lrsk_avc_war_battlebarge = {
-	formation_priority = @battlebarge_formation_priority
+lrsk_avc_war_arsenalship = {
+	formation_priority = @arsenalship_formation_priority
 	max_speed = 3
 	acceleration = 0.2
 	rotation_speed = 0.15
-	combat_max_speed = @battlebarge_combat_speed
-	combat_rotation_speed = @battlebarge_combat_rotation
-	collision_radius = @battlebarge_collision_radius
+	combat_max_speed = @arsenalship_combat_speed
+	combat_rotation_speed = @arsenalship_combat_rotation
+	collision_radius = @arsenalship_collision_radius
 	modifier = {
 		ship_armor_add = 100
 		#ship_evasion_add = 0
@@ -184,7 +184,7 @@ lrsk_avc_war_battlebarge = {
 	can_have_federation_design = yes
 	enable_default_design = yes
 
-	prerequisites = { "tech_lrsk_avc_war_battlebarge" }
+	prerequisites = { "tech_lrsk_avc_war_arsenalship" }
 
 	class = shipclass_military
 	required_component_set = "ftl_components"

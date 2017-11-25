@@ -16,7 +16,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ship_counter_lrsk_avc_war_battlebarge"
-		textureFile = "gfx/interface/system/icon_lrsk_avc_war_battlebarge.dds"
+		name = "GFX_ship_counter_lrsk_avc_war_arsenalship"
+		textureFile = "gfx/interface/system/icon_lrsk_avc_war_arsenalship.dds"
 	}
 }

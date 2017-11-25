@@ -9,8 +9,8 @@ lrsk_avc_war_frigate_plural:0 "Frigates"
 lrsk_avc_war_battlecruiser:0 "Battlecruiser"
 lrsk_avc_war_battlecruiser_plural:0 "Battlecruisers"
 
-lrsk_avc_war_battlebarge:0 "Battle-Barge"
-lrsk_avc_war_battlebarge_plural:0 "Battle-Barges"
+lrsk_avc_war_arsenalship:0 "Arsenal Ship"
+lrsk_avc_war_arsenalship_plural:0 "Arsenal Ships"
 
 lrsk_avc_war_aura_category_offensive:0 "Offensive Aura"
 lrsk_avc_war_aura_category_defensive:0 "Defensive Aura"
@@ -61,11 +61,11 @@ LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Battle
 LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Battlecruiser)"
 LRSK_AVC_WAR_BATTLECRUISER_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Battlecruiser)"
 
-LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Battle-Barge)"
-LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Battle-Barge)"
-LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Battle-Barge)"
-LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Battle-Barge)"
-LRSK_AVC_WAR_BATTLEBARGE_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Battle-Barge)"
+LRSK_AVC_WAR_ARSENALSHIP_COMBAT_COMPUTER_1:0 "Basic Combat Computer (Arsenal Ship)"
+LRSK_AVC_WAR_ARSENALSHIP_COMBAT_COMPUTER_2:0 "Intermediate Combat Computer (Arsenal Ship)"
+LRSK_AVC_WAR_ARSENALSHIP_COMBAT_COMPUTER_3:0 "Advanced Combat Computer (Arsenal Ship)"
+LRSK_AVC_WAR_ARSENALSHIP_COMBAT_COMPUTER_4:0 "Sentient Combat Computer (Arsenal Ship)"
+LRSK_AVC_WAR_ARSENALSHIP_COMBAT_COMPUTER_PRECOG:0 "Precognitive Interface (Arsenal Ship)"
 
 LRSK_AVC_WAR_AURA_EMPTY:0 "Empty Slot"
 

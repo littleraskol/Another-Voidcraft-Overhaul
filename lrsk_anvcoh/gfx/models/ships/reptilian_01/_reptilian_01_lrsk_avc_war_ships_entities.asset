@@ -5,12 +5,12 @@
 @monitor_scale = 1.25
 @frigate_scale = 1.25
 @battlecruiser_scale = 1.25
-@battlebarge_scale = 1.25
+@arsenalship_scale = 1.25
 
 @monitor_size = 7.8
 @frigate_size = 9.75
 @battlecruiser_size = 14.7
-@battlebarge_size = 18.0
+@arsenalship_size = 18.0
 
 ################################################################################
 # MONITOR
@@ -177,7 +177,7 @@ entity = {
 ################################################################################
 
 entity = {
-	name = "reptilian_01_lrsk_avc_war_battlebarge_entity"
+	name = "reptilian_01_lrsk_avc_war_arsenalship_entity"
 	pdxmesh = "reptilian_01_battleship_frame_mesh"
 
 	default_state = "idle"

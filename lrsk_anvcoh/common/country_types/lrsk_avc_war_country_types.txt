@@ -57,17 +57,17 @@ default = {
 					}
 					modifier = {
 						add = -5
-						has_technology = tech_lrsk_avc_war_battlebarge
+						has_technology = tech_lrsk_avc_war_arsenalship
 					}
 				}
 				# Final: 20
 			}
 
-			lrsk_avc_war_battlebarge = {
+			lrsk_avc_war_arsenalship = {
 				fraction = {
 					modifier = {
 						add = 5
-						has_technology = tech_lrsk_avc_war_battlebarge
+						has_technology = tech_lrsk_avc_war_arsenalship
 					}
 					# Final: 5
 				}
