@@ -1,0 +1,102 @@
+# Another Voidcraft Overhaul
+# Military Ship Sizes - Battleship Class
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Ship Variables
+################################################################################
+
+@arsenalship_combat_speed = 0.75
+@arsenalship_combat_rotation = 0.025
+@arsenalship_collision_radius = 4.5
+@arsenalship_formation_priority = 5
+
+@flag_combat_speed = 0.7
+@flag_collision_radius = 5.5
+
+@aux_formation_priority = 6
+
+################################################################################
+# ARSENAL SHIP (AR)
+################################################################################
+
+# A heavy, versatile battleship-sized class
+
+lrsk_avc_war_arsenalship = {
+	formation_priority = @arsenalship_formation_priority
+	max_speed = 3
+	acceleration = 0.2
+	rotation_speed = 0.15
+	combat_max_speed = @arsenalship_combat_speed
+	combat_rotation_speed = @arsenalship_combat_rotation
+	collision_radius = @arsenalship_collision_radius
+	modifier = {
+		ship_armor_add = 100
+		#ship_evasion_add = 0
+	}
+	max_hitpoints = 3000
+	size_multiplier = 12
+	fleet_slot_size = 4
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 5
+	base_buildtime = 600
+	required_spaceport_level = 6
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_arsenalship" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+}
+
+
+################################################################################
+# FLAGSHIP (FS)
+################################################################################
+
+# A heavy, versatile battleship-sized class
+
+lrsk_avc_war_flagship = {
+	formation_priority = @arsenalship_formation_priority
+	max_speed = 3
+	acceleration = 0.2
+	rotation_speed = 0.15
+	combat_max_speed = @arsenalship_combat_speed
+	combat_rotation_speed = @arsenalship_combat_rotation
+	collision_radius = @arsenalship_collision_radius
+	modifier = {
+		ship_armor_add = 100
+		#ship_evasion_add = 0
+	}
+	max_hitpoints = 3000
+	size_multiplier = 16
+	fleet_slot_size = 4
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part2" } "stern" = { locator = "part3" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 5
+	base_buildtime = 600
+	required_spaceport_level = 6
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_arsenalship" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_xlarge_aura_components"
+}

@@ -1,4 +1,4 @@
-# Advanced Voidcraft Classes: Warships
+# Another Voidcraft Overhaul
 # Country Types - Default
 # Author: littleraskol (based on work by King Lemming)
 

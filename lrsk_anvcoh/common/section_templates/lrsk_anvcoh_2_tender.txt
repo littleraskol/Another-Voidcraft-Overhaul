@@ -1,5 +1,5 @@
 # Another Voidcraft Overhaul
-# Section Templates - Frigate
+# Section Templates - Tender
 # Author: littleraskol (based on work by King Lemming)
 
 ################################################################################

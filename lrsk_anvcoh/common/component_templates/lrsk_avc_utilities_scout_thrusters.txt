@@ -1,4 +1,4 @@
-# Advanced Voidcraft Classes: Scouts
+# Another Voidcraft Overhaul
 # Ship Components - Thrusters
 # Author: littleraskol (based on work by King Lemming)
 

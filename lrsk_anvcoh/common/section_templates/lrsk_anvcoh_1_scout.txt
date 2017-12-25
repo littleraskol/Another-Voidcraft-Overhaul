@@ -1,8 +1,10 @@
 # Another Voidcraft Overhaul
-# Section Templates - Scouts
+# Section Templates - Scout
 # Author: littleraskol (based on work by King Lemming)
 
-############ Scout ############
+################################################################################
+# SCOUT
+################################################################################
 
 # Intended for early-game exploration. Light and cheap, little room for defense.
 
@@ -21,7 +23,6 @@ ship_section_template = {
 }
 
 # Intended for military scouting. More expensive, but more room for defensive features.
-# Tech prereq to prevent it from being default.
 
 ship_section_template = {
 	key = "LRSK_AVC_SCOUT_RECON"
@@ -30,7 +31,7 @@ ship_section_template = {
 	entity = "corvette_S1_entity"
 	icon = "GFX_ship_part_core_mid"
 
-	prerequisites = { tech_spaceport_2 }
+	#prerequisites = { tech_spaceport_2 }
 
 	component_slot = {
 		name = "SMALL_GUN_01"
@@ -70,18 +71,3 @@ ship_section_template = {
 
 	cost = 35
 }
-
-#ship_section_template = {
-#	key = "LRSK_AVC_SCOUT_RECON"
-#	ship_size = lrsk_avc_scout
-#	fits_on_slot = mid
-#	entity = "science_ship_entity"
-#	icon = "GFX_ship_part_core_mid"
-#
-#	prerequisites = { tech_spaceport_2 }
-#
-#	medium_utility_slots = 4
-#	aux_utility_slots = 1
-#
-#	cost = 25
-#}

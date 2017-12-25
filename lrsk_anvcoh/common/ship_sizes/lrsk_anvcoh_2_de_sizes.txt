@@ -1,0 +1,99 @@
+# Another Voidcraft Overhaul
+# Military Ship Sizes - Destroyer Class
+# Author: littleraskol (based on work by King Lemming)
+
+################################################################################
+# Ship Variables
+################################################################################
+
+@frigate_combat_speed = 1.25
+@frigate_combat_rotation = 0.05
+@frigate_collision_radius = 2.9
+@frigate_formation_priority = 1
+
+@tender_combat_speed = 1
+@tender_collision_radius = 3
+
+@aux_formation_priority = 6
+
+################################################################################
+# FRIGATE (FG)
+################################################################################
+
+# A heavy, versatile destroyer-sized class
+
+lrsk_avc_war_frigate = {
+	formation_priority = @frigate_formation_priority
+	max_speed = 4.5
+	acceleration = 0.3
+	rotation_speed = 0.2
+	combat_max_speed = @frigate_combat_speed
+	combat_rotation_speed = @frigate_combat_rotation
+	collision_radius = @frigate_collision_radius
+	modifier = {
+		ship_armor_add = 20
+		ship_evasion_add = 25
+	}
+	max_hitpoints = 750
+	size_multiplier = 3
+	fleet_slot_size = 2
+	section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 150
+	required_spaceport_level = 4
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_war_frigate" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "ai_behaviour"  #adds ai module for behaviour
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "powerstation_components"
+	required_component_set = "lrsk_avc_war_ship_medium_aura_components"
+}
+
+################################################################################
+# TENDER (TN)
+################################################################################
+
+# A basic fleet support craft.
+
+lrsk_avc_aux_tender = {
+	formation_priority = @aux_formation_priority
+	max_speed = 3.75
+	acceleration = 0.3
+	rotation_speed = 0.2
+	combat_max_speed = @tender_combat_speed
+	combat_rotation_speed = 0.05
+	collision_radius = @tender_collision_radius
+	modifier = {
+		ship_armor_add = 15
+		ship_evasion_add = 40
+	}
+	max_hitpoints = 600
+	size_multiplier = 4
+	fleet_slot_size = 2
+	section_slots = { "bow" = { locator = "part1" } "stern" = { locator = "part2" } }
+	#section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 3
+	base_buildtime = 150
+	required_spaceport_level = 3
+	can_have_federation_design = yes
+	enable_default_design = yes
+
+	prerequisites = { "tech_lrsk_avc_aux_ships" }
+
+	class = shipclass_military
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "ship_sensor_components"
+	required_component_set = "lrsk_avc_aux_ship_tender_aura_components"
+}

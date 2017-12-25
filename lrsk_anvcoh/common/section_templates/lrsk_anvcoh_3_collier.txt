@@ -1,5 +1,5 @@
 # Another Voidcraft Overhaul
-# Section Templates - Battlecruiser
+# Section Templates - Collier
 # Author: littleraskol (based on work by King Lemming)
 
 ################################################################################
